@@ -13,476 +13,7 @@
 <body>
   <div id="root"></div>
   <script type="text/babel">
-    const { useState } = React;
-
-    // 記事データ（31件）
-    const articles = [
-      {
-        id: 1,
-        title: "【入社エントリ】「個の成長」を会社と社会に還元したい！エンジニアとして、新天地で描く未来",
-        url: "https://note.com/kaonavi/n/n4328cb8016a6",
-        media: "note公式",
-        tags: {
-          job: ["エンジニア"],
-          experience: ["中堅"],
-          values: ["成長志向", "技術挑戦", "社会貢献"],
-          workstyle: ["フルリモート可"],
-          careerPath: ["専門性深化"],
-          background: ["大手出身"]
-        },
-        reasonTemplate: "大手IT企業から転職し、技術成長と社会貢献を両立しているエンジニアの実体験"
-      },
-      {
-        id: 2,
-        title: "【入社エントリ】20代後半のキャリアの葛藤。「自律」を求めてたどり着いたカオナビ",
-        url: "https://note.com/kaonavi/n/n71666ef3d7e0",
-        media: "note公式",
-        tags: {
-          job: ["コーポレート"],
-          experience: ["若手"],
-          values: ["裁量・自律", "ワークライフバランス"],
-          workstyle: ["フルリモート可"],
-          careerPath: ["幅広い経験"],
-          background: ["異業種転職"]
-        },
-        reasonTemplate: "自律的な働き方とワークライフバランスを実現した経営企画メンバーの話"
-      },
-      {
-        id: 3,
-        title: "【入社エントリ】「拾って美味しく調理する」自由と責任。新規事業でのマーケター成長",
-        url: "https://note.com/kaonavi/n/ne950d77bf6d3",
-        media: "note公式",
-        tags: {
-          job: ["マーケティング"],
-          experience: ["中堅"],
-          values: ["裁量・自律", "成長志向"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["幅広い経験"],
-          background: ["大手出身"]
-        },
-        reasonTemplate: "新規事業で大きな裁量を持ち、マーケターとして急成長した実例"
-      },
-      {
-        id: 4,
-        title: "【入社エントリ】想像以上の裁量の大きさ。マーケターとして広がったキャリアの幅",
-        url: "https://note.com/kaonavi/n/n12edd62e02b5",
-        media: "note公式",
-        tags: {
-          job: ["マーケティング"],
-          experience: ["中堅"],
-          values: ["裁量・自律", "成長志向"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["マネジメント挑戦"],
-          background: []
-        },
-        reasonTemplate: "入社半年でマネージャーに就任、裁量とキャリア拡大を実現したマーケターの話"
-      },
-      {
-        id: 5,
-        title: "【入社エントリ】元ひとり人事だったぼくが、カオナビで人事コミュニティの運営に挑戦",
-        url: "https://note.com/kaonavi/n/nebb3c5362b91",
-        media: "note公式",
-        tags: {
-          job: ["コーポレート"],
-          experience: ["若手"],
-          values: ["カルチャー・人", "成長志向"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["幅広い経験"],
-          background: ["異職種転職"]
-        },
-        reasonTemplate: "人事経験を活かしながら新しい領域に挑戦しているメンバーの入社ストーリー"
-      },
-      {
-        id: 6,
-        title: "【入社エントリ】「仕組みづくり」が私のキャリア。事業全体を動かす次のステージ",
-        url: "https://note.com/kaonavi/n/n232bcc52f242",
-        media: "note公式",
-        tags: {
-          job: ["コーポレート"],
-          experience: ["中堅"],
-          values: ["成長志向", "裁量・自律"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["幅広い経験"],
-          background: ["異職種転職", "異業種転職"]
-        },
-        reasonTemplate: "販売員→経理→CSと多様なキャリアを経て事業企画に挑戦する話"
-      },
-      {
-        id: 7,
-        title: "42歳、執行役員から初の転職。カオナビで見つけた成長の続き",
-        url: "https://note.com/kaonavi/n/ne7c8355276fd",
-        media: "note公式",
-        tags: {
-          job: ["PdM"],
-          experience: ["40代以上"],
-          values: ["成長志向", "カルチャー・人"],
-          workstyle: ["出社積極派"],
-          careerPath: ["マネジメント挑戦"],
-          background: ["大手出身"]
-        },
-        reasonTemplate: "40代で初転職し、3ヶ月で部長就任。年齢に関係なく挑戦できる環境"
-      },
-      {
-        id: 8,
-        title: "他社経験で広がった視野を武器に。アルムナイ人材が挑む営業改革",
-        url: "https://note.com/kaonavi/n/n2891c94bd98b",
-        media: "note公式",
-        tags: {
-          job: ["セールス"],
-          experience: ["中堅"],
-          values: ["成長志向", "裁量・自律"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["マネジメント挑戦"],
-          background: []
-        },
-        reasonTemplate: "一度退職し他社経験を積んで再入社、営業マネージャーとして活躍する話"
-      },
-      {
-        id: 9,
-        title: "「以前にも増して仕事が楽しくなった」カスタマーサクセスになって起きた5つの変化",
-        url: "https://note.com/kaonavi/n/n3fd7d7fa53ab",
-        media: "note公式",
-        tags: {
-          job: ["カスタマーサクセス"],
-          experience: ["中堅"],
-          values: ["成長志向", "カルチャー・人"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["専門性深化"],
-          background: []
-        },
-        reasonTemplate: "多機能プロダクトで提案の幅が広がり、仕事がより楽しくなった実体験"
-      },
-      {
-        id: 10,
-        title: "挑戦を後押しする文化のもとで、可能性を広げ続ける。23年卒FSが語る成長の裏側",
-        url: "https://note.com/kaonavi/n/na742deadc9fa",
-        media: "note公式",
-        tags: {
-          job: ["セールス"],
-          experience: ["新卒・第二新卒"],
-          values: ["成長志向", "カルチャー・人"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["幅広い経験"],
-          background: []
-        },
-        reasonTemplate: "新卒3年目で目標比180%達成。若手でも成果を出せる環境の具体例"
-      },
-      {
-        id: 11,
-        title: "カオナビらしさとは──バリュー改定を受け、社員は何を思うのか",
-        url: "https://note.com/kaonavi_campus/n/nc99d65aed54b",
-        media: "note公式",
-        tags: {
-          job: ["エンジニア", "セールス", "カスタマーサクセス", "マーケティング", "PdM", "コーポレート", "デザイナー"],
-          experience: ["新卒・第二新卒", "若手", "中堅", "ベテラン", "40代以上"],
-          values: ["カルチャー・人"],
-          workstyle: ["フルリモート可", "出社積極派", "どちらでも可"],
-          careerPath: ["専門性深化", "マネジメント挑戦", "幅広い経験", "未定"],
-          background: []
-        },
-        reasonTemplate: "カオナビのバリューと「ユニーク・パフォーマー」像を社員視点で解説"
-      },
-      {
-        id: 12,
-        title: "「自分の限界」を少しずつ超えていく。23年卒5人それぞれの成長とは",
-        url: "https://note.com/kaonavi_campus/n/nce52f702ba46",
-        media: "note公式",
-        tags: {
-          job: ["エンジニア", "セールス"],
-          experience: ["新卒・第二新卒"],
-          values: ["成長志向", "カルチャー・人"],
-          workstyle: ["フルリモート可"],
-          careerPath: ["幅広い経験"],
-          background: []
-        },
-        reasonTemplate: "新卒入社メンバー5人それぞれの成長ストーリーと働く環境のリアル"
-      },
-      {
-        id: 13,
-        title: "チャレンジを後押ししてくれる環境がある──キャリア形成",
-        url: "https://note.com/kaonavi_campus/n/nba1472055553",
-        media: "note公式",
-        tags: {
-          job: ["カスタマーサクセス", "セールス"],
-          experience: ["中堅"],
-          values: ["成長志向", "裁量・自律"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["幅広い経験", "マネジメント挑戦"],
-          background: []
-        },
-        reasonTemplate: "ハンズアップ制度を活用した社内キャリアチェンジの実例"
-      },
-      {
-        id: 14,
-        title: "「カオナビ公式noteの歩き方」",
-        url: "https://note.com/kaonavi/n/n05724648d2a8",
-        media: "note公式",
-        tags: {
-          job: ["エンジニア", "セールス", "カスタマーサクセス", "マーケティング", "PdM", "コーポレート", "デザイナー"],
-          experience: ["新卒・第二新卒", "若手", "中堅", "ベテラン", "40代以上"],
-          values: ["カルチャー・人"],
-          workstyle: ["フルリモート可", "出社積極派", "どちらでも可"],
-          careerPath: ["専門性深化", "マネジメント挑戦", "幅広い経験", "未定"],
-          background: []
-        },
-        reasonTemplate: "カオナビの採用コンテンツ全体像を把握できるガイド記事"
-      },
-      {
-        id: 15,
-        title: "24新卒カオナビエンジニアの実践研修を行いました！",
-        url: "https://note.com/kaonavi_devs/n/n6770d2b5b50f",
-        media: "note技術広報",
-        tags: {
-          job: ["エンジニア"],
-          experience: ["新卒・第二新卒"],
-          values: ["成長志向", "技術挑戦"],
-          workstyle: ["出社積極派"],
-          careerPath: ["専門性深化"],
-          background: []
-        },
-        reasonTemplate: "新卒エンジニア向けの充実した研修プログラムの具体的内容"
-      },
-      {
-        id: 16,
-        title: "エンジニアがこの先生きのこるためのカンファレンスに参加",
-        url: "https://note.com/kaonavi_devs/n/ne5af51f0a6d7",
-        media: "note技術広報",
-        tags: {
-          job: ["エンジニア"],
-          experience: ["ベテラン", "40代以上"],
-          values: ["技術挑戦", "成長志向"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["専門性深化"],
-          background: []
-        },
-        reasonTemplate: "ベテランエンジニアのキャリア継続とアウトプット文化"
-      },
-      {
-        id: 17,
-        title: "PHPカンファレンス名古屋2025に参加しました！",
-        url: "https://note.com/kaonavi_devs/n/n75e0ba55b939",
-        media: "note技術広報",
-        tags: {
-          job: ["エンジニア"],
-          experience: ["若手", "中堅", "ベテラン"],
-          values: ["技術挑戦", "カルチャー・人"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["専門性深化"],
-          background: []
-        },
-        reasonTemplate: "技術カンファレンスへの積極参加と書籍出版を支援する文化"
-      },
-      {
-        id: 18,
-        title: "カオナビQAエンジニアによる品質について対話した話",
-        url: "https://note.com/kaonavi_devs/n/nc373ebf3b414",
-        media: "note技術広報",
-        tags: {
-          job: ["エンジニア"],
-          experience: ["中堅", "ベテラン"],
-          values: ["技術挑戦", "カルチャー・人"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["専門性深化"],
-          background: []
-        },
-        reasonTemplate: "QAとエンジニアがチームで品質に向き合う開発文化"
-      },
-      {
-        id: 19,
-        title: "こんにちは！カオナビ技術広報です！",
-        url: "https://note.com/kaonavi_devs/n/ne09e70613c5b",
-        media: "note技術広報",
-        tags: {
-          job: ["エンジニア"],
-          experience: ["若手", "中堅", "ベテラン"],
-          values: ["技術挑戦", "カルチャー・人"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["専門性深化", "幅広い経験"],
-          background: []
-        },
-        reasonTemplate: "エンジニア組織の技術広報活動とカンファレンススポンサー文化"
-      },
-      {
-        id: 20,
-        title: "新たな挑戦を後押しするエンジニアカルチャーが書籍出版も！？",
-        url: "https://vivivi.kaonavi.jp/articles/technical-book_250225/",
-        media: "vivivi",
-        tags: {
-          job: ["エンジニア"],
-          experience: ["中堅", "ベテラン"],
-          values: ["技術挑戦", "成長志向"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["専門性深化"],
-          background: []
-        },
-        reasonTemplate: "エンジニア8名で技術書を共同執筆。アウトプットを後押しする文化"
-      },
-      {
-        id: 21,
-        title: "裁量と挑戦が人を育てる。PdMとして成長できるカオナビの土壌",
-        url: "https://vivivi.kaonavi.jp/articles/ataka-doi-250917/",
-        media: "vivivi",
-        tags: {
-          job: ["PdM"],
-          experience: ["中堅", "ベテラン"],
-          values: ["裁量・自律", "成長志向"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["マネジメント挑戦", "専門性深化"],
-          background: []
-        },
-        reasonTemplate: "ディレクターからマネージャーへステップアップしたPdMの成長環境"
-      },
-      {
-        id: 22,
-        title: "新風を吹き込む百戦錬磨のアイデアマン──仮説思考力と多角的視点",
-        url: "https://vivivi.kaonavi.jp/articles/hasegawa-oka-220905/",
-        media: "vivivi",
-        tags: {
-          job: ["デザイナー"],
-          experience: ["中堅", "ベテラン"],
-          values: ["裁量・自律", "成長志向"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["専門性深化"],
-          background: ["大手出身"]
-        },
-        reasonTemplate: "大手広告代理店出身のクリエイティブディレクターが語る企画力発揮の場"
-      },
-      {
-        id: 23,
-        title: "ハイパフォーマーの秘訣は「視野の広さ」と「汲み取り力」",
-        url: "https://vivivi.kaonavi.jp/articles/omori-masae-211227/",
-        media: "vivivi",
-        tags: {
-          job: ["セールス", "カスタマーサクセス"],
-          experience: ["中堅"],
-          values: ["成長志向", "裁量・自律"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["幅広い経験"],
-          background: []
-        },
-        reasonTemplate: "複数職種でトップ成績を収めたハイパフォーマーの仕事術"
-      },
-      {
-        id: 24,
-        title: "感覚を研ぎ澄ませる──シンプルなデザインを洗練させるUIデザイナー",
-        url: "https://vivivi.kaonavi.jp/articles/ui-designer-220128/",
-        media: "vivivi",
-        tags: {
-          job: ["デザイナー"],
-          experience: ["若手", "中堅"],
-          values: ["技術挑戦", "裁量・自律"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["専門性深化"],
-          background: []
-        },
-        reasonTemplate: "プロダクトのUI/UXを追求するデザイナーチームの仕事の進め方"
-      },
-      {
-        id: 25,
-        title: "最適解は異なるからこそ面白い──組織変革に挑むエンタープライズセールス",
-        url: "https://vivivi.kaonavi.jp/articles/yanai-yu-230310/",
-        media: "vivivi",
-        tags: {
-          job: ["セールス"],
-          experience: ["中堅"],
-          values: ["成長志向", "社会貢献"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["専門性深化"],
-          background: ["大手出身"]
-        },
-        reasonTemplate: "大手IT企業のHR経験を活かしてエンタープライズ営業で活躍する話"
-      },
-      {
-        id: 26,
-        title: "「これ、何で売れてるんだ？」元自営業のマーケターがCVR10倍を実現",
-        url: "https://vivivi.kaonavi.jp/articles/watanabe-yoshihiko-210326/",
-        media: "vivivi",
-        tags: {
-          job: ["マーケティング"],
-          experience: ["中堅"],
-          values: ["成長志向", "裁量・自律"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["マネジメント挑戦"],
-          background: ["異業種転職"]
-        },
-        reasonTemplate: "自営業経験を活かし、チームで成果を出すマーケティングマネージャーの話"
-      },
-      {
-        id: 27,
-        title: "個人の成長を組織に還元する。顧客目線の想像力を持ちながらすすめる仕事",
-        url: "https://vivivi.kaonavi.jp/articles/utani-arifumi-221219/",
-        media: "vivivi",
-        tags: {
-          job: ["エンジニア"],
-          experience: ["中堅", "ベテラン"],
-          values: ["成長志向", "カルチャー・人"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["マネジメント挑戦"],
-          background: []
-        },
-        reasonTemplate: "テックリードとしてチーム成長と個人成長を両立させる働き方"
-      },
-      {
-        id: 28,
-        title: "カオナビ初の新卒入社メンバーの、3年目の成長実感",
-        url: "https://vivivi.kaonavi.jp/articles/new-graduate-engineers-220831/",
-        media: "vivivi",
-        tags: {
-          job: ["エンジニア"],
-          experience: ["新卒・第二新卒", "若手"],
-          values: ["成長志向", "技術挑戦"],
-          workstyle: ["フルリモート可"],
-          careerPath: ["専門性深化"],
-          background: []
-        },
-        reasonTemplate: "新卒3年目エンジニアが語る技術成長と働きやすさ"
-      },
-      {
-        id: 29,
-        title: "「自分の限界」を少しずつ超えていく。23年卒5人それぞれの成長とは（vivivi版）",
-        url: "https://vivivi.kaonavi.jp/articles/new-graduate-engineers-241225/",
-        media: "vivivi",
-        tags: {
-          job: ["エンジニア", "セールス"],
-          experience: ["新卒・第二新卒"],
-          values: ["成長志向", "カルチャー・人"],
-          workstyle: ["フルリモート可"],
-          careerPath: ["幅広い経験"],
-          background: []
-        },
-        reasonTemplate: "新卒メンバーのリアルな成長とフルリモート環境での働き方"
-      },
-      {
-        id: 30,
-        title: "量から質を追求する組織へ。インサイドセールスの挑戦",
-        url: "https://vivivi.kaonavi.jp/articles/is-20250820/",
-        media: "vivivi",
-        tags: {
-          job: ["セールス"],
-          experience: ["若手", "中堅"],
-          values: ["成長志向", "裁量・自律"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["幅広い経験"],
-          background: []
-        },
-        reasonTemplate: "仕組み化とデータ活用で進化するインサイドセールス組織"
-      },
-      {
-        id: 31,
-        title: "変わり続けるから、強くなる。職能別組織へ移行したカイゼン部のリアル",
-        url: "https://vivivi.kaonavi.jp/articles/talenthr_kaizen-251114/",
-        media: "vivivi",
-        tags: {
-          job: ["エンジニア"],
-          experience: ["中堅", "ベテラン"],
-          values: ["カルチャー・人", "成長志向"],
-          workstyle: ["どちらでも可"],
-          careerPath: ["幅広い経験"],
-          background: []
-        },
-        reasonTemplate: "組織の変化に柔軟に対応しながら成長し続けるエンジニアチーム"
-      }
-    ];
+    const { useState, useEffect } = React;
 
     const JOB_OPTIONS = [
       { value: "", label: "選択してください" },
@@ -549,7 +80,7 @@
       return score;
     };
 
-    const getRecommendations = (criteria, topN = 3) => {
+    const getRecommendations = (articles, criteria, topN = 3) => {
       return articles
         .map(a => ({ ...a, score: calculateScore(a, criteria) }))
         .filter(a => a.score > 0)
@@ -558,9 +89,29 @@
     };
 
     function App() {
+      const [articles, setArticles] = useState([]);
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState(null);
       const [criteria, setCriteria] = useState({ job: "", experience: "", values: [], workstyle: "", careerPath: "", background: "" });
       const [recommendations, setRecommendations] = useState([]);
       const [hasSearched, setHasSearched] = useState(false);
+
+      // 外部JSONファイルを読み込み
+      useEffect(() => {
+        fetch('./articles.json')
+          .then(response => {
+            if (!response.ok) throw new Error('データの読み込みに失敗しました');
+            return response.json();
+          })
+          .then(data => {
+            setArticles(data);
+            setLoading(false);
+          })
+          .catch(err => {
+            setError(err.message);
+            setLoading(false);
+          });
+      }, []);
 
       const handleValueChange = (value) => {
         setCriteria(prev => ({
@@ -570,7 +121,7 @@
       };
 
       const handleSearch = () => {
-        setRecommendations(getRecommendations(criteria));
+        setRecommendations(getRecommendations(articles, criteria));
         setHasSearched(true);
       };
 
@@ -581,6 +132,28 @@
       };
 
       const isFormValid = criteria.job || criteria.experience || criteria.values.length > 0;
+
+      if (loading) {
+        return (
+          <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 flex items-center justify-center">
+            <div className="text-center">
+              <div className="text-4xl mb-4">📚</div>
+              <p className="text-gray-600">データを読み込み中...</p>
+            </div>
+          </div>
+        );
+      }
+
+      if (error) {
+        return (
+          <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 flex items-center justify-center">
+            <div className="text-center">
+              <div className="text-4xl mb-4">⚠️</div>
+              <p className="text-red-600">{error}</p>
+            </div>
+          </div>
+        );
+      }
 
       return (
         <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 p-4">
@@ -722,7 +295,7 @@
             )}
 
             <div className="text-center mt-6 text-xs text-gray-400">
-              デモ版 | 記事データ: 31件 | For カオナビ採用担当者様
+              デモ版 | 記事データ: {articles.length}件 | For カオナビ採用担当者様
             </div>
           </div>
         </div>
