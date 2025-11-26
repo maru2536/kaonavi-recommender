@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カオナビ 採用記事レコメンダー</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState } = React;
+
+    // 記事データ（31件）
+    const articles = [
+      {
+        id: 1,
+        title: "【入社エントリ】「個の成長」を会社と社会に還元したい！エンジニアとして、新天地で描く未来",
+        url: "https://note.com/kaonavi/n/n4328cb8016a6",
+        media: "note公式",
+        tags: {
+          job: ["エンジニア"],
+          experience: ["中堅"],
+          values: ["成長志向", "技術挑戦", "社会貢献"],
+          workstyle: ["フルリモート可"],
+          careerPath: ["専門性深化"],
+          background: ["大手出身"]
+        },
+        reasonTemplate: "大手IT企業から転職し、技術成長と社会貢献を両立しているエンジニアの実体験"
+      },
+      {
+        id: 2,
+        title: "【入社エントリ】20代後半のキャリアの葛藤。「自律」を求めてたどり着いたカオナビ",
+        url: "https://note.com/kaonavi/n/n71666ef3d7e0",
+        media: "note公式",
+        tags: {
+          job: ["コーポレート"],
+          experience: ["若手"],
+          values: ["裁量・自律", "ワークライフバランス"],
+          workstyle: ["フルリモート可"],
+          careerPath: ["幅広い経験"],
+          background: ["異業種転職"]
+        },
+        reasonTemplate: "自律的な働き方とワークライフバランスを実現した経営企画メンバーの話"
+      },
+      {
+        id: 3,
+        title: "【入社エントリ】「拾って美味しく調理する」自由と責任。新規事業でのマーケター成長",
+        url: "https://note.com/kaonavi/n/ne950d77bf6d3",
+        media: "note公式",
+        tags: {
+          job: ["マーケティング"],
+          experience: ["中堅"],
+          values: ["裁量・自律", "成長志向"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["幅広い経験"],
+          background: ["大手出身"]
+        },
+        reasonTemplate: "新規事業で大きな裁量を持ち、マーケターとして急成長した実例"
+      },
+      {
+        id: 4,
+        title: "【入社エントリ】想像以上の裁量の大きさ。マーケターとして広がったキャリアの幅",
+        url: "https://note.com/kaonavi/n/n12edd62e02b5",
+        media: "note公式",
+        tags: {
+          job: ["マーケティング"],
+          experience: ["中堅"],
+          values: ["裁量・自律", "成長志向"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["マネジメント挑戦"],
+          background: []
+        },
+        reasonTemplate: "入社半年でマネージャーに就任、裁量とキャリア拡大を実現したマーケターの話"
+      },
+      {
+        id: 5,
+        title: "【入社エントリ】元ひとり人事だったぼくが、カオナビで人事コミュニティの運営に挑戦",
+        url: "https://note.com/kaonavi/n/nebb3c5362b91",
+        media: "note公式",
+        tags: {
+          job: ["コーポレート"],
+          experience: ["若手"],
+          values: ["カルチャー・人", "成長志向"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["幅広い経験"],
+          background: ["異職種転職"]
+        },
+        reasonTemplate: "人事経験を活かしながら新しい領域に挑戦しているメンバーの入社ストーリー"
+      },
+      {
+        id: 6,
+        title: "【入社エントリ】「仕組みづくり」が私のキャリア。事業全体を動かす次のステージ",
+        url: "https://note.com/kaonavi/n/n232bcc52f242",
+        media: "note公式",
+        tags: {
+          job: ["コーポレート"],
+          experience: ["中堅"],
+          values: ["成長志向", "裁量・自律"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["幅広い経験"],
+          background: ["異職種転職", "異業種転職"]
+        },
+        reasonTemplate: "販売員→経理→CSと多様なキャリアを経て事業企画に挑戦する話"
+      },
+      {
+        id: 7,
+        title: "42歳、執行役員から初の転職。カオナビで見つけた成長の続き",
+        url: "https://note.com/kaonavi/n/ne7c8355276fd",
+        media: "note公式",
+        tags: {
+          job: ["PdM"],
+          experience: ["40代以上"],
+          values: ["成長志向", "カルチャー・人"],
+          workstyle: ["出社積極派"],
+          careerPath: ["マネジメント挑戦"],
+          background: ["大手出身"]
+        },
+        reasonTemplate: "40代で初転職し、3ヶ月で部長就任。年齢に関係なく挑戦できる環境"
+      },
+      {
+        id: 8,
+        title: "他社経験で広がった視野を武器に。アルムナイ人材が挑む営業改革",
+        url: "https://note.com/kaonavi/n/n2891c94bd98b",
+        media: "note公式",
+        tags: {
+          job: ["セールス"],
+          experience: ["中堅"],
+          values: ["成長志向", "裁量・自律"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["マネジメント挑戦"],
+          background: []
+        },
+        reasonTemplate: "一度退職し他社経験を積んで再入社、営業マネージャーとして活躍する話"
+      },
+      {
+        id: 9,
+        title: "「以前にも増して仕事が楽しくなった」カスタマーサクセスになって起きた5つの変化",
+        url: "https://note.com/kaonavi/n/n3fd7d7fa53ab",
+        media: "note公式",
+        tags: {
+          job: ["カスタマーサクセス"],
+          experience: ["中堅"],
+          values: ["成長志向", "カルチャー・人"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["専門性深化"],
+          background: []
+        },
+        reasonTemplate: "多機能プロダクトで提案の幅が広がり、仕事がより楽しくなった実体験"
+      },
+      {
+        id: 10,
+        title: "挑戦を後押しする文化のもとで、可能性を広げ続ける。23年卒FSが語る成長の裏側",
+        url: "https://note.com/kaonavi/n/na742deadc9fa",
+        media: "note公式",
+        tags: {
+          job: ["セールス"],
+          experience: ["新卒・第二新卒"],
+          values: ["成長志向", "カルチャー・人"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["幅広い経験"],
+          background: []
+        },
+        reasonTemplate: "新卒3年目で目標比180%達成。若手でも成果を出せる環境の具体例"
+      },
+      {
+        id: 11,
+        title: "カオナビらしさとは──バリュー改定を受け、社員は何を思うのか",
+        url: "https://note.com/kaonavi_campus/n/nc99d65aed54b",
+        media: "note公式",
+        tags: {
+          job: ["エンジニア", "セールス", "カスタマーサクセス", "マーケティング", "PdM", "コーポレート", "デザイナー"],
+          experience: ["新卒・第二新卒", "若手", "中堅", "ベテラン", "40代以上"],
+          values: ["カルチャー・人"],
+          workstyle: ["フルリモート可", "出社積極派", "どちらでも可"],
+          careerPath: ["専門性深化", "マネジメント挑戦", "幅広い経験", "未定"],
+          background: []
+        },
+        reasonTemplate: "カオナビのバリューと「ユニーク・パフォーマー」像を社員視点で解説"
+      },
+      {
+        id: 12,
+        title: "「自分の限界」を少しずつ超えていく。23年卒5人それぞれの成長とは",
+        url: "https://note.com/kaonavi_campus/n/nce52f702ba46",
+        media: "note公式",
+        tags: {
+          job: ["エンジニア", "セールス"],
+          experience: ["新卒・第二新卒"],
+          values: ["成長志向", "カルチャー・人"],
+          workstyle: ["フルリモート可"],
+          careerPath: ["幅広い経験"],
+          background: []
+        },
+        reasonTemplate: "新卒入社メンバー5人それぞれの成長ストーリーと働く環境のリアル"
+      },
+      {
+        id: 13,
+        title: "チャレンジを後押ししてくれる環境がある──キャリア形成",
+        url: "https://note.com/kaonavi_campus/n/nba1472055553",
+        media: "note公式",
+        tags: {
+          job: ["カスタマーサクセス", "セールス"],
+          experience: ["中堅"],
+          values: ["成長志向", "裁量・自律"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["幅広い経験", "マネジメント挑戦"],
+          background: []
+        },
+        reasonTemplate: "ハンズアップ制度を活用した社内キャリアチェンジの実例"
+      },
+      {
+        id: 14,
+        title: "「カオナビ公式noteの歩き方」",
+        url: "https://note.com/kaonavi/n/n05724648d2a8",
+        media: "note公式",
+        tags: {
+          job: ["エンジニア", "セールス", "カスタマーサクセス", "マーケティング", "PdM", "コーポレート", "デザイナー"],
+          experience: ["新卒・第二新卒", "若手", "中堅", "ベテラン", "40代以上"],
+          values: ["カルチャー・人"],
+          workstyle: ["フルリモート可", "出社積極派", "どちらでも可"],
+          careerPath: ["専門性深化", "マネジメント挑戦", "幅広い経験", "未定"],
+          background: []
+        },
+        reasonTemplate: "カオナビの採用コンテンツ全体像を把握できるガイド記事"
+      },
+      {
+        id: 15,
+        title: "24新卒カオナビエンジニアの実践研修を行いました！",
+        url: "https://note.com/kaonavi_devs/n/n6770d2b5b50f",
+        media: "note技術広報",
+        tags: {
+          job: ["エンジニア"],
+          experience: ["新卒・第二新卒"],
+          values: ["成長志向", "技術挑戦"],
+          workstyle: ["出社積極派"],
+          careerPath: ["専門性深化"],
+          background: []
+        },
+        reasonTemplate: "新卒エンジニア向けの充実した研修プログラムの具体的内容"
+      },
+      {
+        id: 16,
+        title: "エンジニアがこの先生きのこるためのカンファレンスに参加",
+        url: "https://note.com/kaonavi_devs/n/ne5af51f0a6d7",
+        media: "note技術広報",
+        tags: {
+          job: ["エンジニア"],
+          experience: ["ベテラン", "40代以上"],
+          values: ["技術挑戦", "成長志向"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["専門性深化"],
+          background: []
+        },
+        reasonTemplate: "ベテランエンジニアのキャリア継続とアウトプット文化"
+      },
+      {
+        id: 17,
+        title: "PHPカンファレンス名古屋2025に参加しました！",
+        url: "https://note.com/kaonavi_devs/n/n75e0ba55b939",
+        media: "note技術広報",
+        tags: {
+          job: ["エンジニア"],
+          experience: ["若手", "中堅", "ベテラン"],
+          values: ["技術挑戦", "カルチャー・人"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["専門性深化"],
+          background: []
+        },
+        reasonTemplate: "技術カンファレンスへの積極参加と書籍出版を支援する文化"
+      },
+      {
+        id: 18,
+        title: "カオナビQAエンジニアによる品質について対話した話",
+        url: "https://note.com/kaonavi_devs/n/nc373ebf3b414",
+        media: "note技術広報",
+        tags: {
+          job: ["エンジニア"],
+          experience: ["中堅", "ベテラン"],
+          values: ["技術挑戦", "カルチャー・人"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["専門性深化"],
+          background: []
+        },
+        reasonTemplate: "QAとエンジニアがチームで品質に向き合う開発文化"
+      },
+      {
+        id: 19,
+        title: "こんにちは！カオナビ技術広報です！",
+        url: "https://note.com/kaonavi_devs/n/ne09e70613c5b",
+        media: "note技術広報",
+        tags: {
+          job: ["エンジニア"],
+          experience: ["若手", "中堅", "ベテラン"],
+          values: ["技術挑戦", "カルチャー・人"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["専門性深化", "幅広い経験"],
+          background: []
+        },
+        reasonTemplate: "エンジニア組織の技術広報活動とカンファレンススポンサー文化"
+      },
+      {
+        id: 20,
+        title: "新たな挑戦を後押しするエンジニアカルチャーが書籍出版も！？",
+        url: "https://vivivi.kaonavi.jp/articles/technical-book_250225/",
+        media: "vivivi",
+        tags: {
+          job: ["エンジニア"],
+          experience: ["中堅", "ベテラン"],
+          values: ["技術挑戦", "成長志向"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["専門性深化"],
+          background: []
+        },
+        reasonTemplate: "エンジニア8名で技術書を共同執筆。アウトプットを後押しする文化"
+      },
+      {
+        id: 21,
+        title: "裁量と挑戦が人を育てる。PdMとして成長できるカオナビの土壌",
+        url: "https://vivivi.kaonavi.jp/articles/ataka-doi-250917/",
+        media: "vivivi",
+        tags: {
+          job: ["PdM"],
+          experience: ["中堅", "ベテラン"],
+          values: ["裁量・自律", "成長志向"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["マネジメント挑戦", "専門性深化"],
+          background: []
+        },
+        reasonTemplate: "ディレクターからマネージャーへステップアップしたPdMの成長環境"
+      },
+      {
+        id: 22,
+        title: "新風を吹き込む百戦錬磨のアイデアマン──仮説思考力と多角的視点",
+        url: "https://vivivi.kaonavi.jp/articles/hasegawa-oka-220905/",
+        media: "vivivi",
+        tags: {
+          job: ["デザイナー"],
+          experience: ["中堅", "ベテラン"],
+          values: ["裁量・自律", "成長志向"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["専門性深化"],
+          background: ["大手出身"]
+        },
+        reasonTemplate: "大手広告代理店出身のクリエイティブディレクターが語る企画力発揮の場"
+      },
+      {
+        id: 23,
+        title: "ハイパフォーマーの秘訣は「視野の広さ」と「汲み取り力」",
+        url: "https://vivivi.kaonavi.jp/articles/omori-masae-211227/",
+        media: "vivivi",
+        tags: {
+          job: ["セールス", "カスタマーサクセス"],
+          experience: ["中堅"],
+          values: ["成長志向", "裁量・自律"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["幅広い経験"],
+          background: []
+        },
+        reasonTemplate: "複数職種でトップ成績を収めたハイパフォーマーの仕事術"
+      },
+      {
+        id: 24,
+        title: "感覚を研ぎ澄ませる──シンプルなデザインを洗練させるUIデザイナー",
+        url: "https://vivivi.kaonavi.jp/articles/ui-designer-220128/",
+        media: "vivivi",
+        tags: {
+          job: ["デザイナー"],
+          experience: ["若手", "中堅"],
+          values: ["技術挑戦", "裁量・自律"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["専門性深化"],
+          background: []
+        },
+        reasonTemplate: "プロダクトのUI/UXを追求するデザイナーチームの仕事の進め方"
+      },
+      {
+        id: 25,
+        title: "最適解は異なるからこそ面白い──組織変革に挑むエンタープライズセールス",
+        url: "https://vivivi.kaonavi.jp/articles/yanai-yu-230310/",
+        media: "vivivi",
+        tags: {
+          job: ["セールス"],
+          experience: ["中堅"],
+          values: ["成長志向", "社会貢献"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["専門性深化"],
+          background: ["大手出身"]
+        },
+        reasonTemplate: "大手IT企業のHR経験を活かしてエンタープライズ営業で活躍する話"
+      },
+      {
+        id: 26,
+        title: "「これ、何で売れてるんだ？」元自営業のマーケターがCVR10倍を実現",
+        url: "https://vivivi.kaonavi.jp/articles/watanabe-yoshihiko-210326/",
+        media: "vivivi",
+        tags: {
+          job: ["マーケティング"],
+          experience: ["中堅"],
+          values: ["成長志向", "裁量・自律"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["マネジメント挑戦"],
+          background: ["異業種転職"]
+        },
+        reasonTemplate: "自営業経験を活かし、チームで成果を出すマーケティングマネージャーの話"
+      },
+      {
+        id: 27,
+        title: "個人の成長を組織に還元する。顧客目線の想像力を持ちながらすすめる仕事",
+        url: "https://vivivi.kaonavi.jp/articles/utani-arifumi-221219/",
+        media: "vivivi",
+        tags: {
+          job: ["エンジニア"],
+          experience: ["中堅", "ベテラン"],
+          values: ["成長志向", "カルチャー・人"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["マネジメント挑戦"],
+          background: []
+        },
+        reasonTemplate: "テックリードとしてチーム成長と個人成長を両立させる働き方"
+      },
+      {
+        id: 28,
+        title: "カオナビ初の新卒入社メンバーの、3年目の成長実感",
+        url: "https://vivivi.kaonavi.jp/articles/new-graduate-engineers-220831/",
+        media: "vivivi",
+        tags: {
+          job: ["エンジニア"],
+          experience: ["新卒・第二新卒", "若手"],
+          values: ["成長志向", "技術挑戦"],
+          workstyle: ["フルリモート可"],
+          careerPath: ["専門性深化"],
+          background: []
+        },
+        reasonTemplate: "新卒3年目エンジニアが語る技術成長と働きやすさ"
+      },
+      {
+        id: 29,
+        title: "「自分の限界」を少しずつ超えていく。23年卒5人それぞれの成長とは（vivivi版）",
+        url: "https://vivivi.kaonavi.jp/articles/new-graduate-engineers-241225/",
+        media: "vivivi",
+        tags: {
+          job: ["エンジニア", "セールス"],
+          experience: ["新卒・第二新卒"],
+          values: ["成長志向", "カルチャー・人"],
+          workstyle: ["フルリモート可"],
+          careerPath: ["幅広い経験"],
+          background: []
+        },
+        reasonTemplate: "新卒メンバーのリアルな成長とフルリモート環境での働き方"
+      },
+      {
+        id: 30,
+        title: "量から質を追求する組織へ。インサイドセールスの挑戦",
+        url: "https://vivivi.kaonavi.jp/articles/is-20250820/",
+        media: "vivivi",
+        tags: {
+          job: ["セールス"],
+          experience: ["若手", "中堅"],
+          values: ["成長志向", "裁量・自律"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["幅広い経験"],
+          background: []
+        },
+        reasonTemplate: "仕組み化とデータ活用で進化するインサイドセールス組織"
+      },
+      {
+        id: 31,
+        title: "変わり続けるから、強くなる。職能別組織へ移行したカイゼン部のリアル",
+        url: "https://vivivi.kaonavi.jp/articles/talenthr_kaizen-251114/",
+        media: "vivivi",
+        tags: {
+          job: ["エンジニア"],
+          experience: ["中堅", "ベテラン"],
+          values: ["カルチャー・人", "成長志向"],
+          workstyle: ["どちらでも可"],
+          careerPath: ["幅広い経験"],
+          background: []
+        },
+        reasonTemplate: "組織の変化に柔軟に対応しながら成長し続けるエンジニアチーム"
+      }
+    ];
+
+    const JOB_OPTIONS = [
+      { value: "", label: "選択してください" },
+      { value: "エンジニア", label: "エンジニア" },
+      { value: "セールス", label: "セールス" },
+      { value: "カスタマーサクセス", label: "カスタマーサクセス" },
+      { value: "マーケティング", label: "マーケティング" },
+      { value: "PdM", label: "PdM（プロダクトマネージャー）" },
+      { value: "コーポレート", label: "コーポレート（経営企画・管理部門）" },
+      { value: "デザイナー", label: "デザイナー" }
+    ];
+
+    const EXPERIENCE_OPTIONS = [
+      { value: "", label: "選択してください" },
+      { value: "新卒・第二新卒", label: "新卒・第二新卒" },
+      { value: "若手", label: "若手（3〜5年）" },
+      { value: "中堅", label: "中堅（6〜15年）" },
+      { value: "ベテラン", label: "ベテラン（15年以上）" },
+      { value: "40代以上", label: "40代以上" }
+    ];
+
+    const VALUES_OPTIONS = [
+      { value: "成長志向", label: "成長・スキルアップ" },
+      { value: "裁量・自律", label: "裁量・自律" },
+      { value: "ワークライフバランス", label: "ワークライフバランス" },
+      { value: "技術挑戦", label: "技術挑戦・アウトプット" },
+      { value: "カルチャー・人", label: "カルチャー・人の良さ" },
+      { value: "社会貢献", label: "社会貢献・ミッション共感" }
+    ];
+
+    const WORKSTYLE_OPTIONS = [
+      { value: "", label: "選択してください" },
+      { value: "フルリモート可", label: "フルリモート重視" },
+      { value: "出社積極派", label: "出社も積極的にしたい" },
+      { value: "どちらでも可", label: "どちらでも可" }
+    ];
+
+    const CAREER_PATH_OPTIONS = [
+      { value: "", label: "選択してください" },
+      { value: "専門性深化", label: "専門性を深めたい" },
+      { value: "マネジメント挑戦", label: "マネジメントに挑戦したい" },
+      { value: "幅広い経験", label: "幅広い経験を積みたい" },
+      { value: "未定", label: "まだ決めていない" }
+    ];
+
+    const BACKGROUND_OPTIONS = [
+      { value: "", label: "特になし" },
+      { value: "大手出身", label: "大手企業出身" },
+      { value: "スタートアップ出身", label: "スタートアップ・ベンチャー出身" },
+      { value: "異業種転職", label: "異業種からの転職" },
+      { value: "異職種転職", label: "異職種からの転職" }
+    ];
+
+    const calculateScore = (article, criteria) => {
+      let score = 0;
+      if (criteria.job && article.tags.job.includes(criteria.job)) score += 5;
+      if (criteria.experience && article.tags.experience.includes(criteria.experience)) score += 3;
+      if (criteria.values && criteria.values.length > 0) {
+        score += criteria.values.filter(v => article.tags.values.includes(v)).length * 2;
+      }
+      if (criteria.workstyle && article.tags.workstyle.includes(criteria.workstyle)) score += 2;
+      if (criteria.careerPath && article.tags.careerPath.includes(criteria.careerPath)) score += 2;
+      if (criteria.background && article.tags.background.includes(criteria.background)) score += 1;
+      return score;
+    };
+
+    const getRecommendations = (criteria, topN = 3) => {
+      return articles
+        .map(a => ({ ...a, score: calculateScore(a, criteria) }))
+        .filter(a => a.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, topN);
+    };
+
+    function App() {
+      const [criteria, setCriteria] = useState({ job: "", experience: "", values: [], workstyle: "", careerPath: "", background: "" });
+      const [recommendations, setRecommendations] = useState([]);
+      const [hasSearched, setHasSearched] = useState(false);
+
+      const handleValueChange = (value) => {
+        setCriteria(prev => ({
+          ...prev,
+          values: prev.values.includes(value) ? prev.values.filter(v => v !== value) : [...prev.values, value]
+        }));
+      };
+
+      const handleSearch = () => {
+        setRecommendations(getRecommendations(criteria));
+        setHasSearched(true);
+      };
+
+      const handleClear = () => {
+        setCriteria({ job: "", experience: "", values: [], workstyle: "", careerPath: "", background: "" });
+        setRecommendations([]);
+        setHasSearched(false);
+      };
+
+      const isFormValid = criteria.job || criteria.experience || criteria.values.length > 0;
+
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 p-4">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-6">
+              <h1 className="text-2xl font-bold text-gray-800 mb-2">📚 カオナビ 採用記事レコメンダー</h1>
+              <p className="text-gray-600 text-sm">候補者の特性に合わせて、最適な採用記事をおすすめします</p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+              <div className="mb-6">
+                <h2 className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                  <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">1</span>
+                  基本情報
+                </h2>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs text-gray-500 mb-1">希望職種</label>
+                    <select value={criteria.job} onChange={(e) => setCriteria({ ...criteria, job: e.target.value })}
+                      className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-orange-300 focus:border-orange-400 outline-none">
+                      {JOB_OPTIONS.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-xs text-gray-500 mb-1">経験年数</label>
+                    <select value={criteria.experience} onChange={(e) => setCriteria({ ...criteria, experience: e.target.value })}
+                      className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-orange-300 focus:border-orange-400 outline-none">
+                      {EXPERIENCE_OPTIONS.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h2 className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                  <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">2</span>
+                  候補者が重視していること（複数選択可）
+                </h2>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  {VALUES_OPTIONS.map(opt => (
+                    <label key={opt.value}
+                      className={`flex items-center p-2 rounded-lg border cursor-pointer transition-all text-sm ${
+                        criteria.values.includes(opt.value) ? 'bg-orange-100 border-orange-400 text-orange-700' : 'bg-gray-50 border-gray-200 text-gray-600 hover:bg-gray-100'
+                      }`}>
+                      <input type="checkbox" checked={criteria.values.includes(opt.value)} onChange={() => handleValueChange(opt.value)} className="sr-only" />
+                      <span className={`w-4 h-4 rounded border mr-2 flex items-center justify-center flex-shrink-0 ${criteria.values.includes(opt.value) ? 'bg-orange-500 border-orange-500' : 'border-gray-300'}`}>
+                        {criteria.values.includes(opt.value) && <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>}
+                      </span>
+                      {opt.label}
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h2 className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                  <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">3</span>
+                  働き方・キャリアの希望
+                </h2>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs text-gray-500 mb-1">働き方の希望</label>
+                    <select value={criteria.workstyle} onChange={(e) => setCriteria({ ...criteria, workstyle: e.target.value })}
+                      className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-orange-300 focus:border-orange-400 outline-none">
+                      {WORKSTYLE_OPTIONS.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-xs text-gray-500 mb-1">キャリア志向</label>
+                    <select value={criteria.careerPath} onChange={(e) => setCriteria({ ...criteria, careerPath: e.target.value })}
+                      className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-orange-300 focus:border-orange-400 outline-none">
+                      {CAREER_PATH_OPTIONS.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h2 className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                  <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">4</span>
+                  前職の特徴（任意）
+                </h2>
+                <select value={criteria.background} onChange={(e) => setCriteria({ ...criteria, background: e.target.value })}
+                  className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-orange-300 focus:border-orange-400 outline-none">
+                  {BACKGROUND_OPTIONS.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+                </select>
+              </div>
+
+              <div className="flex gap-3">
+                <button onClick={handleSearch} disabled={!isFormValid}
+                  className={`flex-1 py-3 rounded-lg font-semibold transition-all ${isFormValid ? 'bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}>
+                  🔍 おすすめ記事を探す
+                </button>
+                <button onClick={handleClear} className="px-4 py-3 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50 transition-all">クリア</button>
+              </div>
+            </div>
+
+            {hasSearched && (
+              <div className="bg-white rounded-xl shadow-lg p-6">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                  ✨ おすすめ記事
+                  {recommendations.length > 0 && <span className="ml-2 text-sm font-normal text-gray-500">（{recommendations.length}件）</span>}
+                </h2>
+                {recommendations.length === 0 ? (
+                  <div className="text-center py-8 text-gray-500">
+                    <p className="text-4xl mb-2">🤔</p>
+                    <p>条件に合う記事が見つかりませんでした</p>
+                    <p className="text-sm mt-1">条件を変更してお試しください</p>
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    {recommendations.map((article, index) => (
+                      <div key={article.id} className="border border-gray-200 rounded-lg p-4 hover:border-orange-300 hover:shadow-md transition-all">
+                        <div className="flex items-start gap-3">
+                          <div className="flex-shrink-0 w-8 h-8 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center font-bold text-sm">{index + 1}</div>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="font-semibold text-gray-800 text-sm leading-tight mb-2">{article.title}</h3>
+                            <p className="text-xs text-gray-500 mb-2">
+                              <span className="inline-block bg-gray-100 px-2 py-0.5 rounded mr-2">{article.media}</span>
+                              <span className="text-orange-600">スコア: {article.score}点</span>
+                            </p>
+                            <div className="bg-amber-50 rounded-lg p-2 mb-3">
+                              <p className="text-xs text-amber-800">💡 {article.reasonTemplate}</p>
+                            </div>
+                            <a href={article.url} target="_blank" rel="noopener noreferrer"
+                              className="inline-flex items-center text-sm text-orange-600 hover:text-orange-700 font-medium">
+                              🔗 記事を読む
+                              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
+            <div className="text-center mt-6 text-xs text-gray-400">
+              デモ版 | 記事データ: 31件 | For カオナビ採用担当者様
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
