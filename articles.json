@@ -19,15 +19,21 @@
         "中堅"
       ],
       "values": [
-        "社会貢献"
+        "成長志向",
+        "裁量・自律",
+        "技術挑戦"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化",
+        "マネジメント挑戦"
       ],
-      "background": []
+      "background": [
+        "大手出身",
+        "スタートアップ出身"
+      ]
     },
     "reasonTemplate": "カオナビのプロダクトビジョンと事業の方向性"
   },
@@ -41,49 +47,27 @@
         "エンジニア"
       ],
       "experience": [
-        "中堅"
+        "若手"
       ],
       "values": [
-        "成長志向"
+        "成長志向",
+        "技術挑戦",
+        "社会貢献"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化"
       ],
-      "background": []
+      "background": [
+        "異業種転職"
+      ]
     },
     "reasonTemplate": "エンジニアとして入社したメンバーのリアルな転職・入社体験談"
   },
   {
     "id": 3,
-    "title": "LeSS' Yoaké ASIA 2025に参加してきました！",
-    "url": "https://note.com/kaonavi/n/neaea949ef872",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 4,
     "title": "評価の「納得感」を軸に見る人事評価をめぐる上司と部下の認識差",
     "url": "https://note.com/kaonavi/n/nd9475c48fee9",
     "media": "note公式",
@@ -102,20 +86,21 @@
         "中堅"
       ],
       "values": [
+        "成長志向",
         "カルチャー・人"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "未定"
       ],
       "background": []
     },
     "reasonTemplate": "人事・組織課題に関する調査データと知見"
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "【入社エントリ】「個の成長」を会社と社会に還元したい！エンジニアとして、新天地で描く未来。",
     "url": "https://note.com/kaonavi/n/n4328cb8016a6",
     "media": "note公式",
@@ -124,24 +109,27 @@
         "エンジニア"
       ],
       "experience": [
-        "中堅"
+        "若手"
       ],
       "values": [
         "成長志向",
+        "技術挑戦",
         "社会貢献"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化"
       ],
-      "background": []
+      "background": [
+        "大手出身"
+      ]
     },
     "reasonTemplate": "エンジニアとして入社したメンバーのリアルな転職・入社体験談"
   },
   {
-    "id": 6,
+    "id": 5,
     "title": "変わり続けるから、強くなる。職能別組織へ移行したTalentHRカイゼン部のリアル",
     "url": "https://note.com/kaonavi/n/n44d5f44f61c1",
     "media": "note公式",
@@ -150,50 +138,30 @@
         "エンジニア"
       ],
       "experience": [
+        "新卒・第二新卒",
         "若手",
         "中堅"
       ],
       "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 7,
-    "title": "PHPカンファレンス福岡2025に参加しました！",
-    "url": "https://note.com/kaonavi/n/nfce9b33c5afc",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
+        "成長志向",
         "技術挑戦"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化",
+        "マネジメント挑戦"
       ],
-      "background": []
+      "background": [
+        "大手出身",
+        "スタートアップ出身"
+      ]
     },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
   },
   {
-    "id": 8,
+    "id": 6,
     "title": "リーダーは“役職”じゃなく“姿勢”。PjLが実践する現場発リーダーシップエンジニア",
     "url": "https://note.com/kaonavi/n/n086a5dcd7639",
     "media": "note公式",
@@ -206,7 +174,41 @@
         "中堅"
       ],
       "values": [
-        "カルチャー・人"
+        "成長志向",
+        "裁量・自律",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化",
+        "マネジメント挑戦"
+      ],
+      "background": [
+        "大手出身",
+        "スタートアップ出身"
+      ]
+    },
+    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 7,
+    "title": "あえて、「型」を破ってほしい。カオナビで、セールスの最高峰を目指しませんか",
+    "url": "https://note.com/kaonavi/n/n13fb37929b10",
+    "media": "note公式",
+    "tags": {
+      "job": [
+        "セールス",
+        "カスタマーサクセス"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "裁量・自律"
       ],
       "workstyle": [
         "どちらでも可"
@@ -214,192 +216,43 @@
       "careerPath": [
         "マネジメント挑戦"
       ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 9,
-    "title": "あえて、「型」を破ってほしい。カオナビで、セールスの最高峰を目指しませんか",
-    "url": "https://note.com/kaonavi/n/n13fb37929b10",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "セールス"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
+      "background": [
+        "異業種転職"
+      ]
     },
     "reasonTemplate": "セールスの働き方とカオナビのカルチャーを紹介"
   },
   {
-    "id": 10,
+    "id": 8,
     "title": "【入社エントリ】「問い合わせ対応のその先へ！」お客様の声から分析し、製品をより良いものにしていくカスタマーサポートへの挑戦。",
     "url": "https://note.com/kaonavi/n/n582fb946cb67",
     "media": "note公式",
     "tags": {
       "job": [
-        "カスタマーサポート"
+        "カスタマーサクセス"
       ],
       "experience": [
-        "中堅"
+        "新卒・第二新卒",
+        "若手"
       ],
       "values": [
-        "成長志向"
+        "成長志向",
+        "カルチャー・人"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化"
       ],
-      "background": []
+      "background": [
+        "異業種転職"
+      ]
     },
     "reasonTemplate": "カスタマーサポートとして入社したメンバーのリアルな転職・入社体験談"
   },
   {
-    "id": 11,
-    "title": "Observability Conference Tokyo 2025に参加してきました",
-    "url": "https://note.com/kaonavi/n/nfb4384fb320f",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 12,
-    "title": "kaonavi Tech Talk#21を開催しました！",
-    "url": "https://note.com/kaonavi/n/n19d2e9472da0",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "社内技術イベントを通じたエンジニアの学習・交流文化"
-  },
-  {
-    "id": 13,
-    "title": "PRODUCT HISTORY CONFERENCE 2025に参加してきました！",
-    "url": "https://note.com/kaonavi/n/naa81bdbc011f",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "PdM"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "PdMの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 14,
-    "title": "カオナビはData Engineering Summitに協賛、エンジニアが登壇します",
-    "url": "https://note.com/kaonavi/n/n9ddc50ea1b29",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 15,
-    "title": "kaonavi Tech Talk 〜若手エンジニア Face to Face LT会 vol.2〜を開催しました！",
-    "url": "https://note.com/kaonavi/n/n7eabaa6c061a",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "社内技術イベントを通じたエンジニアの学習・交流文化"
-  },
-  {
-    "id": 16,
+    "id": 9,
     "title": "挑戦を後押しする文化のもとで、可能性を広げ続ける。23年卒フィールドセールスが語る“成長の裏側”",
     "url": "https://note.com/kaonavi/n/na742deadc9fa",
     "media": "note公式",
@@ -412,6 +265,7 @@
       ],
       "values": [
         "成長志向",
+        "裁量・自律",
         "カルチャー・人"
       ],
       "workstyle": [
@@ -425,7 +279,7 @@
     "reasonTemplate": "セールスの成長環境と挑戦を後押しするカルチャー"
   },
   {
-    "id": 17,
+    "id": 10,
     "title": "【入社エントリ】働く人のポテンシャルを解放したい──私がカオナビでタレントマネジメントに挑む理由",
     "url": "https://note.com/kaonavi/n/n22d32b5233b2",
     "media": "note公式",
@@ -440,207 +294,30 @@
         "デザイナー"
       ],
       "experience": [
+        "若手",
         "中堅"
       ],
       "values": [
+        "成長志向",
+        "カルチャー・人",
         "社会貢献"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "マネジメント挑戦"
+        "幅広い経験"
       ],
-      "background": []
+      "background": [
+        "異業種転職"
+      ]
     },
     "reasonTemplate": "エンジニアとして入社したメンバーのリアルな転職・入社体験談"
   },
   {
-    "id": 18,
-    "title": "PHPカンファレンス広島2025 イベントレポート",
-    "url": "https://note.com/kaonavi/n/n3b0da89f131c",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 19,
-    "title": "カオナビはPHPカンファレンス福岡2025に協賛、スポンサーブースを出展、エンジニアが登壇します",
-    "url": "https://note.com/kaonavi/n/n6f832baea963",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 20,
-    "title": "Registered Agile Testing研修に参加しました!",
-    "url": "https://note.com/kaonavi/n/nc61a6260fdfd",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 21,
+    "id": 11,
     "title": "満席御礼！「AI×人事の未来」を考えるワークショップの裏側を大公開！",
     "url": "https://note.com/kaonavi/n/n44dd4c044e20",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "マーケティング",
-        "コーポレート"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "カオナビのプロダクトビジョンと事業の方向性"
-  },
-  {
-    "id": 22,
-    "title": "【入社エントリ】「営業としてもっと成長したい！」切磋琢磨する環境を求め辿り着いたカオナビ。公共セールスとしての挑戦と成長の3ヶ月。",
-    "url": "https://note.com/kaonavi/n/n94ee553db3f8",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "セールス"
-      ],
-      "experience": [
-        "中堅"
-      ],
-      "values": [
-        "成長志向"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "セールスとして入社したメンバーのリアルな転職・入社体験談"
-  },
-  {
-    "id": 23,
-    "title": "Go Confenrence 2025に参加しました！",
-    "url": "https://note.com/kaonavi/n/n5c5ee344a805",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 24,
-    "title": "スクラム祭り＆XP祭りに参加しました！",
-    "url": "https://note.com/kaonavi/n/ne70ac15a5792",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 25,
-    "title": "【入社エントリ】タレントマネジメントを日本のスタンダードに！エンタープライズセールスとしてカオナビで社会を変える挑戦",
-    "url": "https://note.com/kaonavi/n/nfc5b0c88ff1c",
     "media": "note公式",
     "tags": {
       "job": [
@@ -653,6 +330,95 @@
         "デザイナー"
       ],
       "experience": [
+        "新卒・第二新卒",
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦",
+        "社会貢献"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "未定"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "カオナビのプロダクトビジョンと事業の方向性"
+  },
+  {
+    "id": 12,
+    "title": "【入社エントリ】「営業としてもっと成長したい！」切磋琢磨する環境を求め辿り着いたカオナビ。公共セールスとしての挑戦と成長の3ヶ月。",
+    "url": "https://note.com/kaonavi/n/n94ee553db3f8",
+    "media": "note公式",
+    "tags": {
+      "job": [
+        "セールス"
+      ],
+      "experience": [
+        "若手"
+      ],
+      "values": [
+        "成長志向",
+        "裁量・自律",
+        "社会貢献"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "幅広い経験"
+      ],
+      "background": [
+        "異業種転職"
+      ]
+    },
+    "reasonTemplate": "セールスとして入社したメンバーのリアルな転職・入社体験談"
+  },
+  {
+    "id": 13,
+    "title": "【入社エントリ】タレントマネジメントを日本のスタンダードに！エンタープライズセールスとしてカオナビで社会を変える挑戦",
+    "url": "https://note.com/kaonavi/n/nfc5b0c88ff1c",
+    "media": "note公式",
+    "tags": {
+      "job": [
+        "セールス"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "社会貢献"
+      ],
+      "workstyle": [
+        "フルリモート可"
+      ],
+      "careerPath": [
+        "幅広い経験"
+      ],
+      "background": [
+        "異業種転職"
+      ]
+    },
+    "reasonTemplate": "エンジニアとして入社したメンバーのリアルな転職・入社体験談"
+  },
+  {
+    "id": 14,
+    "title": "【入社エントリ】潜在ニーズを掴み、周りを巻き込む──異業種転職で気づいた仕事の本質",
+    "url": "https://note.com/kaonavi/n/n83729389047b",
+    "media": "note公式",
+    "tags": {
+      "job": [
+        "カスタマーサクセス",
+        "セールス"
+      ],
+      "experience": [
+        "若手",
         "中堅"
       ],
       "values": [
@@ -665,63 +431,6 @@
       "careerPath": [
         "マネジメント挑戦"
       ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアとして入社したメンバーのリアルな転職・入社体験談"
-  },
-  {
-    "id": 26,
-    "title": "フロントエンドカンファレンス東京に参加しました！",
-    "url": "https://note.com/kaonavi/n/n4c6809252844",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 27,
-    "title": "【入社エントリ】潜在ニーズを掴み、周りを巻き込む──異業種転職で気づいた仕事の本質",
-    "url": "https://note.com/kaonavi/n/n83729389047b",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア",
-        "セールス",
-        "カスタマーサクセス",
-        "マーケティング",
-        "PdM",
-        "コーポレート",
-        "デザイナー"
-      ],
-      "experience": [
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
       "background": [
         "異業種転職"
       ]
@@ -729,7 +438,7 @@
     "reasonTemplate": "転職を経て入社したメンバーのリアルな入社体験談"
   },
   {
-    "id": 28,
+    "id": 15,
     "title": "なぜ同じ人事評価でも納得できる人とできない人がいるのか－被評価者の納得感に関する調査－",
     "url": "https://note.com/kaonavi/n/n07d37c783d5e",
     "media": "note公式",
@@ -748,6 +457,33 @@
         "中堅"
       ],
       "values": [
+        "成長志向",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "未定"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "人事・組織課題に関する調査データと知見"
+  },
+  {
+    "id": 16,
+    "title": "【入社エントリ】人材営業からカスタマーサクセスへ！「難しいけど、楽しい」タレントマネジメントへの挑戦",
+    "url": "https://note.com/kaonavi/n/n059faaf42788",
+    "media": "note公式",
+    "tags": {
+      "job": [
+        "カスタマーサクセス"
+      ],
+      "experience": [
+        "新卒・第二新卒"
+      ],
+      "values": [
+        "成長志向",
         "カルチャー・人"
       ],
       "workstyle": [
@@ -755,38 +491,6 @@
       ],
       "careerPath": [
         "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "人事・組織課題に関する調査データと知見"
-  },
-  {
-    "id": 29,
-    "title": "【入社エントリ】人材営業からカスタマーサクセスへ！「難しいけど、楽しい」タレントマネジメントへの挑戦",
-    "url": "https://note.com/kaonavi/n/n059faaf42788",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア",
-        "セールス",
-        "カスタマーサクセス",
-        "マーケティング",
-        "PdM",
-        "コーポレート",
-        "デザイナー"
-      ],
-      "experience": [
-        "中堅"
-      ],
-      "values": [
-        "成長志向",
-        "社会貢献"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "マネジメント挑戦"
       ],
       "background": [
         "異業種転職"
@@ -795,36 +499,9 @@
     "reasonTemplate": "エンジニアとして入社したメンバーのリアルな転職・入社体験談"
   },
   {
-    "id": 30,
+    "id": 17,
     "title": "育成・人材開発が最重要課題 – 課題多き中でも、人事担当者の前向きなキャリア意識 –",
     "url": "https://note.com/kaonavi/n/nf970bbb5aaed",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア",
-        "コーポレート"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "成長志向"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの成長環境と挑戦を後押しするカルチャー"
-  },
-  {
-    "id": 31,
-    "title": "「なぜAI推進室メンバーは全員兼務？」　カオナビAI推進室長が語る、AI組織立ち上げにかける思い",
-    "url": "https://note.com/kaonavi/n/n69613c8d3efc",
     "media": "note公式",
     "tags": {
       "job": [
@@ -841,7 +518,37 @@
         "中堅"
       ],
       "values": [
+        "成長志向",
         "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "エンジニアの成長環境と挑戦を後押しするカルチャー"
+  },
+  {
+    "id": 18,
+    "title": "「なぜAI推進室メンバーは全員兼務？」　カオナビAI推進室長が語る、AI組織立ち上げにかける思い",
+    "url": "https://note.com/kaonavi/n/n69613c8d3efc",
+    "media": "note公式",
+    "tags": {
+      "job": [
+        "エンジニア",
+        "PdM",
+        "デザイナー"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
       ],
       "workstyle": [
         "どちらでも可"
@@ -854,24 +561,19 @@
     "reasonTemplate": "カオナビのプロダクトビジョンと事業の方向性"
   },
   {
-    "id": 32,
+    "id": 19,
     "title": "【入社エントリ】「探していた世界観がここにあった」──元コンサルがカオナビで実現する「人と組織の才能を開花させる未来」",
     "url": "https://note.com/kaonavi/n/n479a14f3727e",
     "media": "note公式",
     "tags": {
       "job": [
-        "エンジニア",
-        "セールス",
-        "カスタマーサクセス",
-        "マーケティング",
-        "PdM",
-        "コーポレート",
-        "デザイナー"
+        "カスタマーサクセス"
       ],
       "experience": [
         "中堅"
       ],
       "values": [
+        "成長志向",
         "カルチャー・人"
       ],
       "workstyle": [
@@ -887,7 +589,7 @@
     "reasonTemplate": "転職を経て入社したメンバーのリアルな入社体験談"
   },
   {
-    "id": 33,
+    "id": 20,
     "title": "【レポート】27卒向けインターンシップを開催！「個」をエンパワーメントする新規事業の立案に挑戦",
     "url": "https://note.com/kaonavi/n/n814d217d4911",
     "media": "note公式",
@@ -905,46 +607,50 @@
         "新卒・第二新卒"
       ],
       "values": [
-        "成長志向"
+        "成長志向",
+        "裁量・自律"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "未定"
       ],
       "background": []
     },
     "reasonTemplate": "インターンシッププログラムの内容と学生向け情報"
   },
   {
-    "id": 34,
+    "id": 21,
     "title": "打席を自ら作り、挑戦を続ける。顧客視点でプロダクトの価値を生み出すカオナビのPMM",
     "url": "https://note.com/kaonavi/n/n817ebcbaf358",
     "media": "note公式",
     "tags": {
       "job": [
+        "マーケティング",
         "PdM"
       ],
       "experience": [
-        "若手",
         "中堅"
       ],
       "values": [
-        "成長志向"
+        "成長志向",
+        "裁量・自律"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化"
       ],
-      "background": []
+      "background": [
+        "異業種転職"
+      ]
     },
     "reasonTemplate": "PdMの成長環境と挑戦を後押しするカルチャー"
   },
   {
-    "id": 35,
+    "id": 22,
     "title": "他社経験で広がった視野を武器に。アルムナイ人材が挑む営業改革",
     "url": "https://note.com/kaonavi/n/n2891c94bd98b",
     "media": "note公式",
@@ -953,24 +659,28 @@
         "セールス"
       ],
       "experience": [
-        "若手",
         "中堅"
       ],
       "values": [
+        "成長志向",
         "カルチャー・人"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
+        "マネジメント挑戦",
         "幅広い経験"
       ],
-      "background": []
+      "background": [
+        "大手出身",
+        "異業種転職"
+      ]
     },
     "reasonTemplate": "セールスの働き方とカオナビのカルチャーを紹介"
   },
   {
-    "id": 36,
+    "id": 23,
     "title": "スキル管理への課題認識とDX関連スキルの体系化の実態 ～人事・労務担当者への調査でみえた現状～",
     "url": "https://note.com/kaonavi/n/n519950123ee8",
     "media": "note公式",
@@ -989,20 +699,21 @@
         "中堅"
       ],
       "values": [
-        "成長志向"
+        "成長志向",
+        "技術挑戦"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化"
       ],
       "background": []
     },
     "reasonTemplate": "人事・組織課題に関する調査データと知見"
   },
   {
-    "id": 37,
+    "id": 24,
     "title": "裁量と挑戦が人を育てる。PdMとして成長できるカオナビの土壌とは",
     "url": "https://note.com/kaonavi/n/n250c7ef08c00",
     "media": "note公式",
@@ -1022,26 +733,31 @@
         "どちらでも可"
       ],
       "careerPath": [
+        "マネジメント挑戦",
         "幅広い経験"
       ],
-      "background": []
+      "background": [
+        "異業種転職"
+      ]
     },
     "reasonTemplate": "PdMの成長環境と挑戦を後押しするカルチャー"
   },
   {
-    "id": 38,
+    "id": 25,
     "title": "入社3か月のPMMが、創業以来変わることのなかったプロダクトメッセージを変更した舞台裏",
     "url": "https://note.com/kaonavi/n/n8e0a61732000",
     "media": "note公式",
     "tags": {
       "job": [
+        "マーケティング",
         "PdM"
       ],
       "experience": [
-        "若手",
-        "中堅"
+        "新卒・第二新卒",
+        "若手"
       ],
       "values": [
+        "成長志向",
         "カルチャー・人"
       ],
       "workstyle": [
@@ -1050,82 +766,29 @@
       "careerPath": [
         "幅広い経験"
       ],
-      "background": []
+      "background": [
+        "大手出身",
+        "スタートアップ出身"
+      ]
     },
     "reasonTemplate": "PdMの働き方とカオナビのカルチャーを紹介"
   },
   {
-    "id": 39,
-    "title": "フロントエンドカンファレンス北海道2025に参加しました！",
-    "url": "https://note.com/kaonavi/n/n69cb0893f2c5",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 40,
+    "id": 26,
     "title": "【入社エントリ】働き方もキャリアも自分で選ぶ。カオナビ入社半年のリアルな体験談",
     "url": "https://note.com/kaonavi/n/n83ac596dcbf1",
     "media": "note公式",
     "tags": {
       "job": [
-        "エンジニア",
-        "セールス",
-        "カスタマーサクセス",
-        "マーケティング",
-        "PdM",
-        "コーポレート",
-        "デザイナー"
+        "セールス"
       ],
       "experience": [
-        "中堅"
+        "若手"
       ],
       "values": [
         "成長志向",
-        "ワークライフバランス"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "転職を経て入社したメンバーのリアルな入社体験談"
-  },
-  {
-    "id": 41,
-    "title": "スクラムフェス三河2025に参加しました！",
-    "url": "https://note.com/kaonavi/n/n53dde914181d",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
+        "裁量・自律",
+        "ワークライフバランス",
         "カルチャー・人"
       ],
       "workstyle": [
@@ -1134,12 +797,15 @@
       "careerPath": [
         "幅広い経験"
       ],
-      "background": []
+      "background": [
+        "大手出身",
+        "スタートアップ出身"
+      ]
     },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+    "reasonTemplate": "転職を経て入社したメンバーのリアルな入社体験談"
   },
   {
-    "id": 42,
+    "id": 27,
     "title": "【入社エントリ】ポジティブな職場をつくるために。カオナビにフィールドセールスとして飛び込みました！",
     "url": "https://note.com/kaonavi/n/nb4d3a244bd67",
     "media": "note公式",
@@ -1148,9 +814,11 @@
         "セールス"
       ],
       "experience": [
-        "中堅"
+        "若手"
       ],
       "values": [
+        "成長志向",
+        "裁量・自律",
         "カルチャー・人"
       ],
       "workstyle": [
@@ -1159,38 +827,14 @@
       "careerPath": [
         "幅広い経験"
       ],
-      "background": []
+      "background": [
+        "異業種転職"
+      ]
     },
     "reasonTemplate": "セールスとして入社したメンバーのリアルな転職・入社体験談"
   },
   {
-    "id": 43,
-    "title": "カオナビは余熱NIGHT from FEC北海道＆東京2025を株式会社Gaudiy他４社と共催、エンジニアが登壇します",
-    "url": "https://note.com/kaonavi/n/ndb10a8c8a1bf",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 44,
+    "id": 28,
     "title": "タレントマネジメントは発展途上？人事・総務担当者1,000人調査から見える浸透度と導入状況",
     "url": "https://note.com/kaonavi/n/n8ca893bd2ab0",
     "media": "note公式",
@@ -1205,27 +849,198 @@
         "デザイナー"
       ],
       "experience": [
-        "若手",
-        "中堅"
+        "中堅",
+        "若手"
       ],
       "values": [
-        "社会貢献"
+        "成長志向",
+        "カルチャー・人"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "マネジメント挑戦"
+        "未定"
       ],
       "background": []
     },
     "reasonTemplate": "人事・組織課題に関する調査データと知見"
   },
   {
-    "id": 45,
-    "title": "カオナビはフロントエンドカンファレンス東京2025に協賛、エンジニアが登壇します",
-    "url": "https://note.com/kaonavi/n/nc829215301cf",
+    "id": 29,
+    "title": "導入支援の先にある、顧客の本質的課題解決。カスタマーサポート室の挑戦と成長",
+    "url": "https://note.com/kaonavi/n/nb1d860ed2d80",
     "media": "note公式",
+    "tags": {
+      "job": [
+        "カスタマーサクセス"
+      ],
+      "experience": [
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "社会貢献"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": [
+        "異業種転職"
+      ]
+    },
+    "reasonTemplate": "カスタマーサポートの成長環境と挑戦を後押しするカルチャー"
+  },
+  {
+    "id": 30,
+    "title": "【入社エントリ】「コーポレートITのグランドデザインを描く」使命に惹かれて。SIer出身者の私がカオナビで見つけた挑戦",
+    "url": "https://note.com/kaonavi/n/n8c6ec420a79c",
+    "media": "note公式",
+    "tags": {
+      "job": [
+        "エンジニア",
+        "コーポレート"
+      ],
+      "experience": [
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "裁量・自律",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "幅広い経験"
+      ],
+      "background": [
+        "大手出身",
+        "異業種転職"
+      ]
+    },
+    "reasonTemplate": "コーポレートとして入社したメンバーのリアルな転職・入社体験談"
+  },
+  {
+    "id": 31,
+    "title": "【入社エントリ】20代後半のキャリアの葛藤。「自律」を求めてたどり着いたカオナビ。",
+    "url": "https://note.com/kaonavi/n/n71666ef3d7e0",
+    "media": "note公式",
+    "tags": {
+      "job": [
+        "コーポレート"
+      ],
+      "experience": [
+        "若手"
+      ],
+      "values": [
+        "成長志向",
+        "裁量・自律",
+        "ワークライフバランス"
+      ],
+      "workstyle": [
+        "フルリモート可"
+      ],
+      "careerPath": [
+        "幅広い経験"
+      ],
+      "background": [
+        "異業種転職"
+      ]
+    },
+    "reasonTemplate": "転職を経て入社したメンバーのリアルな入社体験談"
+  },
+  {
+    "id": 32,
+    "title": "会社と家の往復だった私が、社外に「師匠」と「仲間」を見つけて仕事がもっと楽しくなった話",
+    "url": "https://note.com/kaonavi/n/n965693e33e6d",
+    "media": "note公式",
+    "tags": {
+      "job": [
+        "コーポレート"
+      ],
+      "experience": [
+        "新卒・第二新卒",
+        "若手"
+      ],
+      "values": [
+        "成長志向",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "未定"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "カオナビの働き方とカルチャーを紹介"
+  },
+  {
+    "id": 33,
+    "title": "こんにちは！カオナビ技術広報です！",
+    "url": "https://note.com/kaonavi_devs/n/ne09e70613c5b",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "新卒・第二新卒",
+        "若手"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 34,
+    "title": "カオナビはCoLab Confに協賛、エンジニアが登壇、スポンサーブースを出展します",
+    "url": "https://note.com/kaonavi_devs/n/n3db14289aea5",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "新卒・第二新卒",
+        "若手"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 35,
+    "title": "カオナビはPHPカンファレンス2025にplatinumスポンサーとして協賛、エンジニアが登壇、スポンサーブースを出展します",
+    "url": "https://note.com/kaonavi_devs/n/n6b0a2e0d39b6",
+    "media": "note技術広報",
     "tags": {
       "job": [
         "エンジニア"
@@ -1235,6 +1050,303 @@
         "中堅"
       ],
       "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [],
+      "background": []
+    },
+    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+  },
+  {
+    "id": 36,
+    "title": "PHPカンファレンス新潟2025に参加しました！",
+    "url": "https://note.com/kaonavi_devs/n/n6770e1f95bc4",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+  },
+  {
+    "id": 37,
+    "title": "JaSST'25 Tohokuに参加しました！",
+    "url": "https://note.com/kaonavi_devs/n/n54b4558f78c5",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア",
+        "カスタマーサクセス"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+  },
+  {
+    "id": 38,
+    "title": "スクフェス新潟2025に参加してきました！",
+    "url": "https://note.com/kaonavi_devs/n/nacb8e1b0e910",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "裁量・自律",
+        "技術挑戦",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 39,
+    "title": "カオナビは開発生産性カンファレンス2025に協賛、エンジニアが登壇、スポンサーブースを出展します",
+    "url": "https://note.com/kaonavi_devs/n/n9e392daa9fd7",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+  },
+  {
+    "id": 40,
+    "title": "カオナビはPHPカンファレンス新潟2025に協賛、エンジニアが3名登壇します",
+    "url": "https://note.com/kaonavi_devs/n/n4ab54b203c9e",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "裁量・自律",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "フルリモート可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+  },
+  {
+    "id": 41,
+    "title": "株式会社カオナビでのmcp-snowflake-server導入に向けた取り組みをご紹介します！",
+    "url": "https://note.com/kaonavi_devs/n/ncfbe55f79275",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 42,
+    "title": "カオナビユーザー会に参加してきました！",
+    "url": "https://note.com/kaonavi_devs/n/n40a1a6314729",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [],
+      "background": []
+    },
+    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 43,
+    "title": "株式会社カオナビ 社内ISUCON開催による若手エンジニア育成の取り組みについて紹介します！",
+    "url": "https://note.com/kaonavi_devs/n/n02e805f7c4bd",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "新卒・第二新卒",
+        "若手"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 44,
+    "title": "PHPerKaigi2025に参加しました！",
+    "url": "https://note.com/kaonavi_devs/n/n3b76978de294",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "新卒・第二新卒",
+        "若手"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [],
+      "background": []
+    },
+    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+  },
+  {
+    "id": 45,
+    "title": "JaSST'25 Tokyoに参加しました！",
+    "url": "https://note.com/kaonavi_devs/n/nec9dff82f1e5",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [],
+      "background": []
+    },
+    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+  },
+  {
+    "id": 46,
+    "title": "kaonavi Tech Talk#20を開催しました！",
+    "url": "https://note.com/kaonavi_devs/n/n7e44fbe17a4e",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア",
+        "デザイナー"
+      ],
+      "experience": [
+        "新卒・第二新卒",
+        "若手"
+      ],
+      "values": [
+        "成長志向",
         "技術挑戦"
       ],
       "workstyle": [
@@ -1245,97 +1357,389 @@
       ],
       "background": []
     },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 46,
-    "title": "導入支援の先にある、顧客の本質的課題解決。カスタマーサポート室の挑戦と成長",
-    "url": "https://note.com/kaonavi/n/nb1d860ed2d80",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "カスタマーサポート"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "成長志向"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "カスタマーサポートの成長環境と挑戦を後押しするカルチャー"
+    "reasonTemplate": "社内技術イベントを通じたエンジニアの学習・交流文化"
   },
   {
     "id": 47,
-    "title": "【入社エントリ】「コーポレートITのグランドデザインを描く」使命に惹かれて。SIer出身者の私がカオナビで見つけた挑戦",
-    "url": "https://note.com/kaonavi/n/n8c6ec420a79c",
-    "media": "note公式",
+    "title": "エンジニアがこの先生きのこるためのカンファレンスに参加しました！",
+    "url": "https://note.com/kaonavi_devs/n/ne5af51f0a6d7",
+    "media": "note技術広報",
     "tags": {
       "job": [
-        "コーポレート",
-        "デザイナー"
+        "エンジニア"
       ],
       "experience": [
-        "中堅"
+        "ベテラン",
+        "40代以上"
       ],
       "values": [
-        "成長志向"
+        "成長志向",
+        "技術挑戦"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化"
       ],
       "background": []
     },
-    "reasonTemplate": "コーポレートとして入社したメンバーのリアルな転職・入社体験談"
+    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
   },
   {
     "id": 48,
-    "title": "ADRは品質保証活動そのものだ。 - 納得感を醸成するアーキテクチャ意思決定プロセス -",
-    "url": "https://note.com/kaonavi/n/nccb19e21324d",
-    "media": "note公式",
+    "title": "バグからチャンスへ：チームを笑顔に変えるポジティブなバグ管理",
+    "url": "https://note.com/kaonavi_devs/n/n7cb98fbf317c",
+    "media": "note技術広報",
     "tags": {
       "job": [
-        "エンジニア",
-        "セールス",
-        "カスタマーサクセス",
-        "マーケティング",
-        "PdM",
-        "コーポレート",
-        "デザイナー"
+        "エンジニア"
       ],
       "experience": [
         "若手",
         "中堅"
       ],
       "values": [
+        "成長志向",
         "カルチャー・人"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化"
       ],
       "background": []
     },
-    "reasonTemplate": "人事・組織課題に関する調査データと知見"
+    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
   },
   {
     "id": 49,
-    "title": "【入社エントリ】20代後半のキャリアの葛藤。「自律」を求めてたどり着いたカオナビ。",
-    "url": "https://note.com/kaonavi/n/n71666ef3d7e0",
-    "media": "note公式",
+    "title": "「The PHP Foundation」へ寄付を行いました",
+    "url": "https://note.com/kaonavi_devs/n/n953a20568c00",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "中堅"
+      ],
+      "values": [
+        "社会貢献",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [],
+      "background": []
+    },
+    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 50,
+    "title": "kaonavi Tech Talk#19を開催しました！",
+    "url": "https://note.com/kaonavi_devs/n/nccdfcff63135",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "新卒・第二新卒",
+        "若手"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [],
+      "background": []
+    },
+    "reasonTemplate": "社内技術イベントを通じたエンジニアの学習・交流文化"
+  },
+  {
+    "id": 51,
+    "title": "PHPカンファレンス名古屋2025に参加しました！",
+    "url": "https://note.com/kaonavi_devs/n/n75e0ba55b939",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "新卒・第二新卒",
+        "若手"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+  },
+  {
+    "id": 52,
+    "title": "エンジニアがこの先生きのこるためのカンファレンス2025にゴールドスポンサーとして協賛、エンジニアが3名登壇します",
+    "url": "https://note.com/kaonavi_devs/n/n9bd1962568b6",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "若手",
+        "中堅",
+        "ベテラン",
+        "40代以上"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦",
+        "カルチャー・人",
+        "社会貢献"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化",
+        "マネジメント挑戦"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+  },
+  {
+    "id": 53,
+    "title": "カオナビQAが取り組む、生成AIを用いた探索テスト",
+    "url": "https://note.com/kaonavi_devs/n/n5822040a355f",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "カオナビのプロダクトビジョンと事業の方向性"
+  },
+  {
+    "id": 54,
+    "title": "カオナビはPHPカンファレンス名古屋2025にシルバースポンサーとして協賛、エンジニアが5名登壇します",
+    "url": "https://note.com/kaonavi_devs/n/n2f0a0173a739",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "フルリモート可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+  },
+  {
+    "id": 55,
+    "title": "PHPカンファレンス2024にスポンサーブース出展、メンバーが登壇しました",
+    "url": "https://note.com/kaonavi_devs/n/n4e4612233202",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+  },
+  {
+    "id": 56,
+    "title": "PRODUCT MANAGER CONFERENCE 2024に参加しました！",
+    "url": "https://note.com/kaonavi_devs/n/n23914d559b88",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "PdM"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "技術カンファレンスへの積極参加とPdMの成長環境"
+  },
+  {
+    "id": 57,
+    "title": "カオナビはRegional Scrum Gathering Tokyo 2025にSILVER SPONSORとして協賛、エンジニアが登壇します",
+    "url": "https://note.com/kaonavi_devs/n/ne4b996f495f7",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "マネジメント挑戦"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 58,
+    "title": "株式会社カオナビアドベントカレンダーを実施します！",
+    "url": "https://note.com/kaonavi_devs/n/n25861cd869cf",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア",
+        "デザイナー"
+      ],
+      "experience": [
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [],
+      "background": []
+    },
+    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 59,
+    "title": "paiza×カオナビ 開発者のしくじりコレクション〜7つの失敗からの学び〜開催！",
+    "url": "https://note.com/kaonavi_devs/n/n1bccde0236cf",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア"
+      ],
+      "experience": [
+        "新卒・第二新卒",
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [],
+      "background": []
+    },
+    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 60,
+    "title": "LeSS' Yoaké ASIA 2024に参加しました！",
+    "url": "https://note.com/kaonavi_devs/n/n3f25a1bba52a",
+    "media": "note技術広報",
+    "tags": {
+      "job": [
+        "エンジニア",
+        "マーケティング"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [],
+      "background": []
+    },
+    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
+  },
+  {
+    "id": 61,
+    "title": "はじめまして！kaonavi404です。",
+    "url": "https://note.com/kaonavi_404/n/n8c983c05adba",
+    "media": "noteブランド",
     "tags": {
       "job": [
         "エンジニア",
@@ -1347,7 +1751,95 @@
         "デザイナー"
       ],
       "experience": [
+        "新卒・第二新卒",
+        "若手"
+      ],
+      "values": [
+        "成長志向",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "未定"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "デザイナーの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 62,
+    "title": "【お知らせ】kaonavi404はカオナビ公式noteに合流します！",
+    "url": "https://note.com/kaonavi_404/n/n6f6f0d4d4f18",
+    "media": "noteブランド",
+    "tags": {
+      "job": [
+        "エンジニア",
+        "セールス",
+        "カスタマーサクセス",
+        "マーケティング",
+        "PdM",
+        "コーポレート",
+        "デザイナー"
+      ],
+      "experience": [
+        "新卒・第二新卒",
+        "若手"
+      ],
+      "values": [
+        "成長志向",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [],
+      "background": []
+    },
+    "reasonTemplate": "デザイナーの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 63,
+    "title": "社員がブランド視点で語る！予実管理システム「ヨジツティクス」誕生秘話",
+    "url": "https://note.com/kaonavi_404/n/n1b46142ffb3a",
+    "media": "noteブランド",
+    "tags": {
+      "job": [
+        "エンジニア",
+        "マーケティング",
+        "デザイナー"
+      ],
+      "experience": [
+        "若手",
         "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "裁量・自律"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "専門性深化",
+        "マネジメント挑戦"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "カオナビのブランド・ビジョンに関する解説"
+  },
+  {
+    "id": 64,
+    "title": "カオナビインターンで３つのデザインチームをローテしてみた結果",
+    "url": "https://note.com/kaonavi_404/n/nbb127678a993",
+    "media": "noteブランド",
+    "tags": {
+      "job": [
+        "デザイナー"
+      ],
+      "experience": [
+        "新卒・第二新卒"
       ],
       "values": [
         "成長志向",
@@ -1361,13 +1853,13 @@
       ],
       "background": []
     },
-    "reasonTemplate": "転職を経て入社したメンバーのリアルな入社体験談"
+    "reasonTemplate": "インターンシッププログラムの内容と学生向け情報"
   },
   {
-    "id": 50,
-    "title": "会社と家の往復だった私が、社外に「師匠」と「仲間」を見つけて仕事がもっと楽しくなった話",
-    "url": "https://note.com/kaonavi/n/n965693e33e6d",
-    "media": "note公式",
+    "id": 65,
+    "title": "社内交流を加速させる秘訣は「華金×サークル活動」？",
+    "url": "https://note.com/kaonavi_404/n/nb99f5d1ae11b",
+    "media": "noteブランド",
     "tags": {
       "job": [
         "エンジニア",
@@ -1379,1011 +1871,25 @@
         "デザイナー"
       ],
       "experience": [
+        "新卒・第二新卒",
         "若手",
         "中堅"
       ],
       "values": [
-        "カルチャー・人"
+        "成長志向",
+        "カルチャー・人",
+        "ワークライフバランス"
       ],
       "workstyle": [
-        "どちらでも可"
+        "フルリモート可"
       ],
-      "careerPath": [
-        "幅広い経験"
-      ],
+      "careerPath": [],
       "background": []
     },
-    "reasonTemplate": "カオナビの働き方とカルチャーを紹介"
-  },
-  {
-    "id": 51,
-    "title": "カオナビはPHPカンファレンス広島2025に協賛、スポンサーブースを出展、エンジニアが登壇します",
-    "url": "https://note.com/kaonavi/n/na5bff8a234ae",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 52,
-    "title": "カオナビはPRODUCT HISTORY CONFERENCE 2025に協賛、スポンサーブースを出展、エンジニアが登壇します",
-    "url": "https://note.com/kaonavi/n/n344c03970eaf",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア",
-        "PdM"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 53,
-    "title": "PHPカンファレンス関西2025に参加しました！",
-    "url": "https://note.com/kaonavi/n/n48efa92ac0ff",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 54,
-    "title": "CoLab Confに参加してきました！",
-    "url": "https://note.com/kaonavi/n/n49c5e9053ccd",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 55,
-    "title": "PHPカンファレンス2025に参加しました！　 ",
-    "url": "https://note.com/kaonavi/n/n0ae32242b6a5",
-    "media": "note公式",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 56,
-    "title": "こんにちは！カオナビ技術広報です！",
-    "url": "https://note.com/kaonavi_devs/n/ne09e70613c5b",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 57,
-    "title": "カオナビはCoLab Confに協賛、エンジニアが登壇、スポンサーブースを出展します",
-    "url": "https://note.com/kaonavi_devs/n/n3db14289aea5",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 58,
-    "title": "カオナビはPHPカンファレンス2025にplatinumスポンサーとして協賛、エンジニアが登壇、スポンサーブースを出展します",
-    "url": "https://note.com/kaonavi_devs/n/n6b0a2e0d39b6",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 59,
-    "title": "PHPカンファレンス新潟2025に参加しました！",
-    "url": "https://note.com/kaonavi_devs/n/n6770e1f95bc4",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 60,
-    "title": "JaSST'25 Tohokuに参加しました！",
-    "url": "https://note.com/kaonavi_devs/n/n54b4558f78c5",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 61,
-    "title": "スクフェス新潟2025に参加してきました！",
-    "url": "https://note.com/kaonavi_devs/n/nacb8e1b0e910",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 62,
-    "title": "カオナビは開発生産性カンファレンス2025に協賛、エンジニアが登壇、スポンサーブースを出展します",
-    "url": "https://note.com/kaonavi_devs/n/n9e392daa9fd7",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 63,
-    "title": "カオナビはPHPカンファレンス新潟2025に協賛、エンジニアが3名登壇します",
-    "url": "https://note.com/kaonavi_devs/n/n4ab54b203c9e",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 64,
-    "title": "株式会社カオナビでのmcp-snowflake-server導入に向けた取り組みをご紹介します！",
-    "url": "https://note.com/kaonavi_devs/n/ncfbe55f79275",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 65,
-    "title": "カオナビユーザー会に参加してきました！",
-    "url": "https://note.com/kaonavi_devs/n/n40a1a6314729",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
+    "reasonTemplate": "デザイナーの働き方とカオナビのカルチャーを紹介"
   },
   {
     "id": 66,
-    "title": "株式会社カオナビ 社内ISUCON開催による若手エンジニア育成の取り組みについて紹介します！",
-    "url": "https://note.com/kaonavi_devs/n/n02e805f7c4bd",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 67,
-    "title": "PHPerKaigi2025に参加しました！",
-    "url": "https://note.com/kaonavi_devs/n/n3b76978de294",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 68,
-    "title": "JaSST'25 Tokyoに参加しました！",
-    "url": "https://note.com/kaonavi_devs/n/nec9dff82f1e5",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 69,
-    "title": "kaonavi Tech Talk#20を開催しました！",
-    "url": "https://note.com/kaonavi_devs/n/n7e44fbe17a4e",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "社内技術イベントを通じたエンジニアの学習・交流文化"
-  },
-  {
-    "id": 70,
-    "title": "エンジニアがこの先生きのこるためのカンファレンスに参加しました！",
-    "url": "https://note.com/kaonavi_devs/n/ne5af51f0a6d7",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 71,
-    "title": "バグからチャンスへ：チームを笑顔に変えるポジティブなバグ管理",
-    "url": "https://note.com/kaonavi_devs/n/n7cb98fbf317c",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 72,
-    "title": "「The PHP Foundation」へ寄付を行いました",
-    "url": "https://note.com/kaonavi_devs/n/n953a20568c00",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 73,
-    "title": "kaonavi Tech Talk#19を開催しました！",
-    "url": "https://note.com/kaonavi_devs/n/nccdfcff63135",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "社内技術イベントを通じたエンジニアの学習・交流文化"
-  },
-  {
-    "id": 74,
-    "title": "PHPカンファレンス名古屋2025に参加しました！",
-    "url": "https://note.com/kaonavi_devs/n/n75e0ba55b939",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 75,
-    "title": "エンジニアがこの先生きのこるためのカンファレンス2025にゴールドスポンサーとして協賛、エンジニアが3名登壇します",
-    "url": "https://note.com/kaonavi_devs/n/n9bd1962568b6",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 76,
-    "title": "カオナビQAが取り組む、生成AIを用いた探索テスト",
-    "url": "https://note.com/kaonavi_devs/n/n5822040a355f",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "カオナビのプロダクトビジョンと事業の方向性"
-  },
-  {
-    "id": 77,
-    "title": "カオナビはPHPカンファレンス名古屋2025にシルバースポンサーとして協賛、エンジニアが5名登壇します",
-    "url": "https://note.com/kaonavi_devs/n/n2f0a0173a739",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 78,
-    "title": "PHPカンファレンス2024にスポンサーブース出展、メンバーが登壇しました",
-    "url": "https://note.com/kaonavi_devs/n/n4e4612233202",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 79,
-    "title": "PRODUCT MANAGER CONFERENCE 2024に参加しました！",
-    "url": "https://note.com/kaonavi_devs/n/n23914d559b88",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "PdM"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とPdMの成長環境"
-  },
-  {
-    "id": 80,
-    "title": "カオナビはRegional Scrum Gathering Tokyo 2025にSILVER SPONSORとして協賛、エンジニアが登壇します",
-    "url": "https://note.com/kaonavi_devs/n/ne4b996f495f7",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 81,
-    "title": "株式会社カオナビアドベントカレンダーを実施します！",
-    "url": "https://note.com/kaonavi_devs/n/n25861cd869cf",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 82,
-    "title": "paiza×カオナビ 開発者のしくじりコレクション〜7つの失敗からの学び〜開催！",
-    "url": "https://note.com/kaonavi_devs/n/n1bccde0236cf",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "成長志向"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 83,
-    "title": "LeSS' Yoaké ASIA 2024に参加しました！",
-    "url": "https://note.com/kaonavi_devs/n/n3f25a1bba52a",
-    "media": "note技術広報",
-    "tags": {
-      "job": [
-        "エンジニア"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "技術カンファレンスへの積極参加とエンジニアの成長環境"
-  },
-  {
-    "id": 84,
-    "title": "はじめまして！kaonavi404です。",
-    "url": "https://note.com/kaonavi_404/n/n8c983c05adba",
-    "media": "noteブランド",
-    "tags": {
-      "job": [
-        "デザイナー"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "デザイナーの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 85,
-    "title": "【お知らせ】kaonavi404はカオナビ公式noteに合流します！",
-    "url": "https://note.com/kaonavi_404/n/n6f6f0d4d4f18",
-    "media": "noteブランド",
-    "tags": {
-      "job": [
-        "デザイナー"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "デザイナーの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 86,
-    "title": "社員がブランド視点で語る！予実管理システム「ヨジツティクス」誕生秘話",
-    "url": "https://note.com/kaonavi_404/n/n1b46142ffb3a",
-    "media": "noteブランド",
-    "tags": {
-      "job": [
-        "デザイナー"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "カオナビのブランド・ビジョンに関する解説"
-  },
-  {
-    "id": 87,
-    "title": "カオナビインターンで３つのデザインチームをローテしてみた結果",
-    "url": "https://note.com/kaonavi_404/n/nbb127678a993",
-    "media": "noteブランド",
-    "tags": {
-      "job": [
-        "デザイナー"
-      ],
-      "experience": [
-        "新卒・第二新卒"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "インターンシッププログラムの内容と学生向け情報"
-  },
-  {
-    "id": 88,
-    "title": "社内交流を加速させる秘訣は「華金×サークル活動」？",
-    "url": "https://note.com/kaonavi_404/n/nb99f5d1ae11b",
-    "media": "noteブランド",
-    "tags": {
-      "job": [
-        "デザイナー"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "デザイナーの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 89,
     "title": "FC今治レディースの選手たちの“はたらく”をさらにアップデート。",
     "url": "https://note.com/kaonavi_404/n/n8b8b8069edb3",
     "media": "noteブランド",
@@ -2398,35 +1904,30 @@
         "デザイナー"
       ],
       "experience": [
-        "若手",
-        "中堅"
+        "新卒・第二新卒",
+        "若手"
       ],
       "values": [
-        "カルチャー・人"
+        "成長志向",
+        "社会貢献"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "未定"
       ],
       "background": []
     },
     "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
   },
   {
-    "id": 90,
+    "id": 67,
     "title": "全社総会を舞台にデザイン組織が横連携！",
     "url": "https://note.com/kaonavi_404/n/n25077139ed5f",
     "media": "noteブランド",
     "tags": {
       "job": [
-        "エンジニア",
-        "セールス",
-        "カスタマーサクセス",
-        "マーケティング",
-        "PdM",
-        "コーポレート",
         "デザイナー"
       ],
       "experience": [
@@ -2434,48 +1935,23 @@
         "中堅"
       ],
       "values": [
+        "成長志向",
         "カルチャー・人"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化"
       ],
       "background": []
     },
     "reasonTemplate": "デザイン組織の働き方とチームカルチャー"
   },
   {
-    "id": 91,
+    "id": 68,
     "title": "満足度9割超えの社員研修！その秘密はゲームにあり？",
     "url": "https://note.com/kaonavi_404/n/n6258d8d26ef8",
-    "media": "noteブランド",
-    "tags": {
-      "job": [
-        "デザイナー"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "技術挑戦"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "デザイナーの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 92,
-    "title": "ブランドデザイン組織が、全社総会をド真面目&緻密に企画・設計していった話。",
-    "url": "https://note.com/kaonavi_404/n/nb248c0d2e24a",
     "media": "noteブランド",
     "tags": {
       "job": [
@@ -2488,10 +1964,40 @@
         "デザイナー"
       ],
       "experience": [
+        "新卒・第二新卒",
         "若手",
         "中堅"
       ],
       "values": [
+        "成長志向",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "未定"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "デザイナーの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 69,
+    "title": "ブランドデザイン組織が、全社総会をド真面目&緻密に企画・設計していった話。",
+    "url": "https://note.com/kaonavi_404/n/nb248c0d2e24a",
+    "media": "noteブランド",
+    "tags": {
+      "job": [
+        "デザイナー",
+        "マーケティング"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
         "カルチャー・人"
       ],
       "workstyle": [
@@ -2505,7 +2011,7 @@
     "reasonTemplate": "カオナビのブランド・ビジョンに関する解説"
   },
   {
-    "id": 93,
+    "id": 70,
     "title": "「ない」を「ある」に変えていく、ブランドデザインチームの話。",
     "url": "https://note.com/kaonavi_404/n/ndc9f511609fe",
     "media": "noteブランド",
@@ -2518,45 +2024,52 @@
         "中堅"
       ],
       "values": [
+        "成長志向",
+        "裁量・自律",
         "カルチャー・人"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化"
       ],
       "background": []
     },
     "reasonTemplate": "カオナビのブランド・ビジョンに関する解説"
   },
   {
-    "id": 94,
+    "id": 71,
     "title": "東京のIT企業が今治で完全オーダーメイドのキッズインターンシップを実施した話。",
     "url": "https://note.com/kaonavi_404/n/na795cf984a0f",
     "media": "noteブランド",
     "tags": {
       "job": [
+        "エンジニア",
+        "セールス",
+        "カスタマーサクセス",
+        "マーケティング",
+        "PdM",
+        "コーポレート",
         "デザイナー"
       ],
       "experience": [
         "新卒・第二新卒"
       ],
       "values": [
-        "カルチャー・人"
+        "社会貢献",
+        "成長志向"
       ],
       "workstyle": [
         "どちらでも可"
       ],
-      "careerPath": [
-        "幅広い経験"
-      ],
+      "careerPath": [],
       "background": []
     },
     "reasonTemplate": "インターンシッププログラムの内容と学生向け情報"
   },
   {
-    "id": 95,
+    "id": 72,
     "title": "愛されるために変わり続ける、プロダクトデザインチームの話。",
     "url": "https://note.com/kaonavi_404/n/n732067146260",
     "media": "noteブランド",
@@ -2569,73 +2082,85 @@
         "中堅"
       ],
       "values": [
+        "成長志向",
+        "裁量・自律",
         "カルチャー・人"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化"
       ],
       "background": []
     },
     "reasonTemplate": "デザイン組織の働き方とチームカルチャー"
   },
   {
-    "id": 96,
+    "id": 73,
     "title": "最前線で戦い続ける、マーケティングデザインチームの話。",
     "url": "https://note.com/kaonavi_404/n/n6e618c23bcf9",
     "media": "noteブランド",
     "tags": {
       "job": [
-        "マーケティング",
-        "デザイナー"
+        "デザイナー",
+        "マーケティング"
       ],
       "experience": [
         "若手",
         "中堅"
       ],
       "values": [
+        "成長志向",
+        "裁量・自律",
         "カルチャー・人"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化",
+        "マネジメント挑戦"
       ],
       "background": []
     },
     "reasonTemplate": "デザイン組織の働き方とチームカルチャー"
   },
   {
-    "id": 97,
+    "id": 74,
     "title": "ゲームが会社をより良くする？",
     "url": "https://note.com/kaonavi_404/n/nb80b19d45aa2",
     "media": "noteブランド",
     "tags": {
       "job": [
+        "エンジニア",
+        "セールス",
+        "カスタマーサクセス",
+        "マーケティング",
+        "PdM",
+        "コーポレート",
         "デザイナー"
       ],
       "experience": [
-        "若手",
-        "中堅"
+        "新卒・第二新卒",
+        "若手"
       ],
       "values": [
+        "成長志向",
         "カルチャー・人"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "未定"
       ],
       "background": []
     },
     "reasonTemplate": "デザイナーの働き方とカオナビのカルチャーを紹介"
   },
   {
-    "id": 98,
+    "id": 75,
     "title": "横連携がデザインをブーストさせる話",
     "url": "https://note.com/kaonavi_404/n/na158b04bf2ca",
     "media": "noteブランド",
@@ -2648,72 +2173,84 @@
         "中堅"
       ],
       "values": [
+        "成長志向",
+        "裁量・自律",
         "カルチャー・人"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化"
       ],
       "background": []
     },
     "reasonTemplate": "デザイン組織の働き方とチームカルチャー"
   },
   {
-    "id": 99,
+    "id": 76,
     "title": "3つのカオのデザイン組織",
     "url": "https://note.com/kaonavi_404/n/ne9093cbf2e9c",
     "media": "noteブランド",
     "tags": {
       "job": [
-        "デザイナー"
+        "デザイナー",
+        "マーケティング"
       ],
       "experience": [
         "若手",
         "中堅"
       ],
       "values": [
-        "カルチャー・人"
+        "成長志向",
+        "裁量・自律",
+        "社会貢献"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化"
       ],
       "background": []
     },
     "reasonTemplate": "デザイン組織の働き方とチームカルチャー"
   },
   {
-    "id": 100,
+    "id": 77,
     "title": "もちろん今が大事。ただ、セカンドキャリアも大事だから。",
     "url": "https://note.com/kaonavi_404/n/n85e2ec2be168",
     "media": "noteブランド",
     "tags": {
       "job": [
+        "エンジニア",
+        "セールス",
+        "カスタマーサクセス",
+        "マーケティング",
+        "PdM",
+        "コーポレート",
         "デザイナー"
       ],
       "experience": [
-        "若手",
-        "中堅"
+        "新卒・第二新卒",
+        "若手"
       ],
       "values": [
-        "成長志向"
+        "成長志向",
+        "社会貢献"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "未定"
       ],
       "background": []
     },
     "reasonTemplate": "デザイナーの成長環境と挑戦を後押しするカルチャー"
   },
   {
-    "id": 101,
+    "id": 78,
     "title": "こんにちは、LIQUIDなオフィス。",
     "url": "https://note.com/kaonavi_404/n/n294a78290e08",
     "media": "noteブランド",
@@ -2728,29 +2265,32 @@
         "デザイナー"
       ],
       "experience": [
+        "新卒・第二新卒",
         "若手",
         "中堅"
       ],
       "values": [
+        "成長志向",
+        "裁量・自律",
+        "ワークライフバランス",
         "カルチャー・人"
       ],
       "workstyle": [
-        "出社積極派"
+        "どちらでも可"
       ],
-      "careerPath": [
-        "幅広い経験"
-      ],
+      "careerPath": [],
       "background": []
     },
     "reasonTemplate": "エンジニアの働き方とカオナビのカルチャーを紹介"
   },
   {
-    "id": 102,
+    "id": 79,
     "title": "「カオナビの個性を伝えるサイトへ」ブランドリニューアル／コーポレートサイト篇",
     "url": "https://note.com/kaonavi_404/n/naddb1d36154d",
     "media": "noteブランド",
     "tags": {
       "job": [
+        "コーポレート",
         "デザイナー"
       ],
       "experience": [
@@ -2758,152 +2298,24 @@
         "中堅"
       ],
       "values": [
+        "成長志向",
+        "裁量・自律",
         "カルチャー・人"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "未定"
       ],
       "background": []
     },
     "reasonTemplate": "カオナビのブランド・ビジョンに関する解説"
   },
   {
-    "id": 103,
+    "id": 80,
     "title": "kaonavi FRIDAY NIGHTって何だ？",
     "url": "https://note.com/kaonavi_404/n/nacdcc41ee0c5",
-    "media": "noteブランド",
-    "tags": {
-      "job": [
-        "デザイナー"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "デザイナーの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 104,
-    "title": "「デザインルールを誰もが使えるものに」ブランドリニューアル／ブランドデッキ篇",
-    "url": "https://note.com/kaonavi_404/n/nb6dc4263e968",
-    "media": "noteブランド",
-    "tags": {
-      "job": [
-        "デザイナー"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "カオナビのブランド・ビジョンに関する解説"
-  },
-  {
-    "id": 105,
-    "title": "kaonaviは何しに今治へ？",
-    "url": "https://note.com/kaonavi_404/n/n77eaae2af893",
-    "media": "noteブランド",
-    "tags": {
-      "job": [
-        "デザイナー"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "デザイナーの働き方とカオナビのカルチャーを紹介"
-  },
-  {
-    "id": 106,
-    "title": "「向き合うことの大切さ」ブランドリニューアル／タグライン・ステートメント篇",
-    "url": "https://note.com/kaonavi_404/n/n6a953c596897",
-    "media": "noteブランド",
-    "tags": {
-      "job": [
-        "デザイナー"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "カオナビのブランド・ビジョンに関する解説"
-  },
-  {
-    "id": 107,
-    "title": "「二次元から三次元へ」ブランドリニューアル／ロゴ篇",
-    "url": "https://note.com/kaonavi_404/n/n88c34c94ef4c",
-    "media": "noteブランド",
-    "tags": {
-      "job": [
-        "デザイナー"
-      ],
-      "experience": [
-        "若手",
-        "中堅"
-      ],
-      "values": [
-        "カルチャー・人"
-      ],
-      "workstyle": [
-        "どちらでも可"
-      ],
-      "careerPath": [
-        "幅広い経験"
-      ],
-      "background": []
-    },
-    "reasonTemplate": "カオナビのブランド・ビジョンに関する解説"
-  },
-  {
-    "id": 108,
-    "title": "「ひとの可能性を正しく理解できる世界へ」  ブランドリニューアル／パーパス篇",
-    "url": "https://note.com/kaonavi_404/n/ne78d860e2ee4",
     "media": "noteブランド",
     "tags": {
       "job": [
@@ -2916,17 +2328,170 @@
         "デザイナー"
       ],
       "experience": [
+        "新卒・第二新卒",
         "若手",
         "中堅"
       ],
       "values": [
-        "成長志向"
+        "成長志向",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [],
+      "background": []
+    },
+    "reasonTemplate": "デザイナーの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 81,
+    "title": "「デザインルールを誰もが使えるものに」ブランドリニューアル／ブランドデッキ篇",
+    "url": "https://note.com/kaonavi_404/n/nb6dc4263e968",
+    "media": "noteブランド",
+    "tags": {
+      "job": [
+        "デザイナー"
+      ],
+      "experience": [
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "裁量・自律",
+        "カルチャー・人"
       ],
       "workstyle": [
         "どちらでも可"
       ],
       "careerPath": [
-        "幅広い経験"
+        "専門性深化"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "カオナビのブランド・ビジョンに関する解説"
+  },
+  {
+    "id": 82,
+    "title": "kaonaviは何しに今治へ？",
+    "url": "https://note.com/kaonavi_404/n/n77eaae2af893",
+    "media": "noteブランド",
+    "tags": {
+      "job": [
+        "エンジニア",
+        "セールス",
+        "カスタマーサクセス",
+        "マーケティング",
+        "PdM",
+        "コーポレート",
+        "デザイナー"
+      ],
+      "experience": [
+        "新卒・第二新卒",
+        "若手"
+      ],
+      "values": [
+        "成長志向",
+        "社会貢献"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "未定"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "デザイナーの働き方とカオナビのカルチャーを紹介"
+  },
+  {
+    "id": 83,
+    "title": "「向き合うことの大切さ」ブランドリニューアル／タグライン・ステートメント篇",
+    "url": "https://note.com/kaonavi_404/n/n6a953c596897",
+    "media": "noteブランド",
+    "tags": {
+      "job": [
+        "エンジニア",
+        "セールス",
+        "カスタマーサクセス",
+        "マーケティング",
+        "PdM",
+        "コーポレート",
+        "デザイナー"
+      ],
+      "experience": [
+        "新卒・第二新卒",
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "社会貢献",
+        "カルチャー・人"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "未定"
+      ],
+      "background": []
+    },
+    "reasonTemplate": "カオナビのブランド・ビジョンに関する解説"
+  },
+  {
+    "id": 84,
+    "title": "「二次元から三次元へ」ブランドリニューアル／ロゴ篇",
+    "url": "https://note.com/kaonavi_404/n/n88c34c94ef4c",
+    "media": "noteブランド",
+    "tags": {
+      "job": [
+        "デザイナー",
+        "マーケティング"
+      ],
+      "experience": [
+        "中堅"
+      ],
+      "values": [
+        "カルチャー・人",
+        "成長志向"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [],
+      "background": []
+    },
+    "reasonTemplate": "カオナビのブランド・ビジョンに関する解説"
+  },
+  {
+    "id": 85,
+    "title": "「ひとの可能性を正しく理解できる世界へ」  ブランドリニューアル／パーパス篇",
+    "url": "https://note.com/kaonavi_404/n/ne78d860e2ee4",
+    "media": "noteブランド",
+    "tags": {
+      "job": [
+        "エンジニア",
+        "マーケティング",
+        "コーポレート",
+        "デザイナー"
+      ],
+      "experience": [
+        "新卒・第二新卒",
+        "若手",
+        "中堅"
+      ],
+      "values": [
+        "成長志向",
+        "技術挑戦",
+        "社会貢献"
+      ],
+      "workstyle": [
+        "どちらでも可"
+      ],
+      "careerPath": [
+        "未定"
       ],
       "background": []
     },
