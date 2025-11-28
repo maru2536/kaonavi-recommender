@@ -67,22 +67,226 @@
       { value: "異職種転職", label: "異職種からの転職" }
     ];
 
-    const calculateScore = (article, criteria) => {
-      let score = 0;
-      if (criteria.job && article.tags.job.includes(criteria.job)) score += 5;
-      if (criteria.experience && article.tags.experience.includes(criteria.experience)) score += 3;
-      if (criteria.values && criteria.values.length > 0) {
-        score += criteria.values.filter(v => article.tags.values.includes(v)).length * 2;
-      }
-      if (criteria.workstyle && article.tags.workstyle.includes(criteria.workstyle)) score += 2;
-      if (criteria.careerPath && article.tags.careerPath.includes(criteria.careerPath)) score += 2;
-      if (criteria.background && article.tags.background.includes(criteria.background)) score += 1;
-      return score;
+    // ========================================
+    // Phase 1: 改善版スコアロジック
+    // ========================================
+
+    // 関連職種マップ（部分マッチング用）
+    const JOB_RELATIONS = {
+      'エンジニア': ['PdM', 'デザイナー'],
+      'PdM': ['エンジニア', 'デザイナー', 'マーケティング'],
+      'セールス': ['カスタマーサクセス', 'マーケティング'],
+      'カスタマーサクセス': ['セールス'],
+      'マーケティング': ['セールス', 'PdM'],
+      'デザイナー': ['PdM', 'エンジニア'],
+      'コーポレート': []
     };
 
-    const getRecommendations = (articles, criteria, topN = 3) => {
+    // 経験年数のミスマッチ定義
+    const EXPERIENCE_MISMATCH = {
+      '新卒・第二新卒': ['40代以上', 'ベテラン'],
+      '若手': ['40代以上'],
+      '40代以上': ['新卒・第二新卒'],
+      'ベテラン': ['新卒・第二新卒']
+    };
+
+    // A. 職種スコア（関連職種も考慮）
+    const getJobScore = (article, candidateJob) => {
+      if (!candidateJob) return { score: 0, isExactMatch: false };
+      
+      // 完全一致
+      if (article.tags.job.includes(candidateJob)) {
+        return { score: 5, isExactMatch: true };
+      }
+      
+      // 関連職種マッチ
+      const relatedJobs = JOB_RELATIONS[candidateJob] || [];
+      if (article.tags.job.some(j => relatedJobs.includes(j))) {
+        return { score: 2, isExactMatch: false };
+      }
+      
+      return { score: 0, isExactMatch: false };
+    };
+
+    // B. 専門性ボーナス（職種が絞られた記事を優遇）
+    const getSpecialtyBonus = (article, hasJobMatch) => {
+      if (!hasJobMatch) return 0;
+      
+      const jobCount = article.tags.job.length;
+      
+      // 1職種のみ → 専門記事 → ボーナス大
+      if (jobCount === 1) return 3;
+      // 2-3職種 → やや専門 → ボーナス小
+      if (jobCount <= 3) return 1;
+      // 4職種以上 → 全社向け → ボーナスなし
+      return 0;
+    };
+
+    // C. 組み合わせボーナス
+    const getCombinationBonus = (matches) => {
+      let bonus = 0;
+      
+      // 職種 + 経験 両方一致 → +2
+      if (matches.job && matches.experience) {
+        bonus += 2;
+      }
+      
+      // 職種 + 経験 + 価値観1つ以上 → さらに +2
+      if (matches.job && matches.experience && matches.valuesCount >= 1) {
+        bonus += 2;
+      }
+      
+      // 価値観が2つ以上一致 → 相乗効果 +1
+      if (matches.valuesCount >= 2) {
+        bonus += 1;
+      }
+      
+      // 4項目以上一致 → 「完璧マッチ」ボーナス +3
+      const totalMatches = [
+        matches.job,
+        matches.experience,
+        matches.valuesCount > 0,
+        matches.workstyle,
+        matches.careerPath,
+        matches.background
+      ].filter(Boolean).length;
+      
+      if (totalMatches >= 4) {
+        bonus += 3;
+      }
+      
+      return bonus;
+    };
+
+    // D. ミスマッチ減点
+    const getMismatchPenalty = (article, criteria) => {
+      let penalty = 0;
+      
+      // 経験年数のミスマッチ
+      if (criteria.experience && EXPERIENCE_MISMATCH[criteria.experience]) {
+        const badMatches = EXPERIENCE_MISMATCH[criteria.experience];
+        const articleExps = article.tags.experience;
+        
+        // 記事が「ミスマッチ経験層のみ」を対象としている場合
+        const hasBadMatch = articleExps.some(e => badMatches.includes(e));
+        const hasGoodMatch = articleExps.some(e => !badMatches.includes(e));
+        
+        if (hasBadMatch && !hasGoodMatch) {
+          penalty -= 3;
+        }
+      }
+      
+      // キャリア志向の逆マッチ（専門性志向 vs マネジメント志向）
+      if (criteria.careerPath === '専門性深化') {
+        if (article.tags.careerPath.includes('マネジメント挑戦') &&
+            !article.tags.careerPath.includes('専門性深化')) {
+          penalty -= 1;
+        }
+      }
+      if (criteria.careerPath === 'マネジメント挑戦') {
+        if (article.tags.careerPath.includes('専門性深化') &&
+            !article.tags.careerPath.includes('マネジメント挑戦')) {
+          penalty -= 1;
+        }
+      }
+      
+      return penalty;
+    };
+
+    // 統合スコア計算（Phase 1 改善版）
+    const calculateScore = (article, criteria) => {
+      let score = 0;
+      const matches = {
+        job: false,
+        experience: false,
+        valuesCount: 0,
+        workstyle: false,
+        careerPath: false,
+        background: false
+      };
+      const breakdown = [];
+      
+      // 1. 職種スコア（関連職種も考慮）
+      const jobResult = getJobScore(article, criteria.job);
+      score += jobResult.score;
+      matches.job = jobResult.isExactMatch;
+      if (jobResult.score > 0) {
+        breakdown.push(jobResult.isExactMatch ? '職種一致' : '関連職種');
+      }
+      
+      // 2. 経験年数
+      if (criteria.experience && article.tags.experience.includes(criteria.experience)) {
+        score += 3;
+        matches.experience = true;
+        breakdown.push('経験一致');
+      }
+      
+      // 3. 価値観（複数選択可）
+      if (criteria.values && criteria.values.length > 0) {
+        const matchedValues = criteria.values.filter(v => 
+          article.tags.values.includes(v)
+        );
+        score += matchedValues.length * 2;
+        matches.valuesCount = matchedValues.length;
+        if (matchedValues.length > 0) {
+          breakdown.push(`価値観${matchedValues.length}件`);
+        }
+      }
+      
+      // 4. 働き方
+      if (criteria.workstyle && article.tags.workstyle.includes(criteria.workstyle)) {
+        score += 2;
+        matches.workstyle = true;
+        breakdown.push('働き方一致');
+      }
+      
+      // 5. キャリア志向
+      if (criteria.careerPath && article.tags.careerPath.includes(criteria.careerPath)) {
+        score += 2;
+        matches.careerPath = true;
+        breakdown.push('キャリア一致');
+      }
+      
+      // 6. 前職の特徴
+      if (criteria.background && article.tags.background.includes(criteria.background)) {
+        score += 1;
+        matches.background = true;
+        breakdown.push('前職一致');
+      }
+      
+      // 7. 専門性ボーナス
+      const specialtyBonus = getSpecialtyBonus(article, matches.job);
+      if (specialtyBonus > 0) {
+        score += specialtyBonus;
+        breakdown.push(`専門性+${specialtyBonus}`);
+      }
+      
+      // 8. 組み合わせボーナス
+      const comboBonus = getCombinationBonus(matches);
+      if (comboBonus > 0) {
+        score += comboBonus;
+        breakdown.push(`組合せ+${comboBonus}`);
+      }
+      
+      // 9. ミスマッチ減点
+      const penalty = getMismatchPenalty(article, criteria);
+      if (penalty < 0) {
+        score += penalty;
+        breakdown.push(`調整${penalty}`);
+      }
+      
+      return {
+        score: Math.max(0, score),
+        breakdown: breakdown
+      };
+    };
+
+    const getRecommendations = (articles, criteria, topN = 5) => {
       return articles
-        .map(a => ({ ...a, score: calculateScore(a, criteria) }))
+        .map(a => {
+          const result = calculateScore(a, criteria);
+          return { ...a, score: result.score, breakdown: result.breakdown };
+        })
         .filter(a => a.score > 0)
         .sort((a, b) => b.score - a.score)
         .slice(0, topN);
@@ -96,7 +300,6 @@
       const [recommendations, setRecommendations] = useState([]);
       const [hasSearched, setHasSearched] = useState(false);
 
-      // 外部JSONファイルを読み込み
       useEffect(() => {
         fetch('./articles.json')
           .then(response => {
@@ -273,8 +476,16 @@
                             <h3 className="font-semibold text-gray-800 text-sm leading-tight mb-2">{article.title}</h3>
                             <p className="text-xs text-gray-500 mb-2">
                               <span className="inline-block bg-gray-100 px-2 py-0.5 rounded mr-2">{article.media}</span>
-                              <span className="text-orange-600">スコア: {article.score}点</span>
+                              <span className="text-orange-600 font-semibold">スコア: {article.score}点</span>
                             </p>
+                            {/* スコア内訳を表示 */}
+                            <div className="flex flex-wrap gap-1 mb-2">
+                              {article.breakdown.map((item, i) => (
+                                <span key={i} className="inline-block bg-orange-50 text-orange-700 text-xs px-2 py-0.5 rounded">
+                                  {item}
+                                </span>
+                              ))}
+                            </div>
                             <div className="bg-amber-50 rounded-lg p-2 mb-3">
                               <p className="text-xs text-amber-800">💡 {article.reasonTemplate}</p>
                             </div>
@@ -295,7 +506,7 @@
             )}
 
             <div className="text-center mt-6 text-xs text-gray-400">
-              デモ版 | 記事データ: {articles.length}件 | For カオナビ採用担当者様
+              v2.0（Phase1改善版）| 記事データ: {articles.length}件 | For カオナビ採用担当者様
             </div>
           </div>
         </div>
