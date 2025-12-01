@@ -275,8 +275,16 @@
         breakdown.push(`調整${penalty}`);
       }
       
+      // 50点満点に正規化（最大39点 → 50点）
+      const rawScore = Math.max(0, score);
+      const maxScore = 39;
+      const normalizedScore = Math.round(rawScore / maxScore * 50);
+      const matchPercent = Math.round(rawScore / maxScore * 100);
+      
       return {
-        score: Math.max(0, score),
+        score: rawScore,
+        score50: Math.min(50, normalizedScore),
+        matchPercent: Math.min(100, matchPercent),
         breakdown: breakdown
       };
     };
@@ -285,7 +293,7 @@
       return articles
         .map(a => {
           const result = calculateScore(a, criteria);
-          return { ...a, score: result.score, breakdown: result.breakdown };
+          return { ...a, score: result.score, score50: result.score50, matchPercent: result.matchPercent, breakdown: result.breakdown };
         })
         .filter(a => a.score > 0)
         .sort((a, b) => b.score - a.score)
@@ -409,6 +417,7 @@
                     </label>
                   ))}
                 </div>
+                <p className="text-xs text-gray-400 mt-2">※1つのみを選択することを推奨します</p>
               </div>
 
               <div className="mb-6">
@@ -476,7 +485,7 @@
                             <h3 className="font-semibold text-gray-800 text-sm leading-tight mb-2">{article.title}</h3>
                             <p className="text-xs text-gray-500 mb-2">
                               <span className="inline-block bg-gray-100 px-2 py-0.5 rounded mr-2">{article.media}</span>
-                              <span className="text-orange-600 font-semibold">スコア: {article.score}点</span>
+                              <span className="text-orange-600 font-semibold">{article.score50}点/50点（マッチ度{article.matchPercent}%）</span>
                             </p>
                             {/* スコア内訳を表示 */}
                             <div className="flex flex-wrap gap-1 mb-2">
@@ -506,7 +515,7 @@
             )}
 
             <div className="text-center mt-6 text-xs text-gray-400">
-              v2.0（Phase1改善版）| 記事データ: {articles.length}件 | For カオナビ採用担当者様
+              v2.2（50点満点表示対応）| 記事データ: {articles.length}件 | For カオナビ採用担当者様
             </div>
           </div>
         </div>
