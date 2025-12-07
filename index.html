@@ -11,6 +11,102 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
 </head>
 <body>
+  <!-- Password Authentication Screen -->
+  <div id="auth-screen" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+  ">
+    <div style="
+      background: white;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    ">
+      <h2 style="
+        font-size: 1.5rem;
+        color: #1F2937;
+        margin-bottom: 0.5rem;
+      ">カオナビ 採用記事レコメンダー</h2>
+      <p style="
+        color: #6B7280;
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+      ">閲覧にはパスワードが必要です</p>
+      <input type="password" id="password-input" placeholder="パスワードを入力" style="
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid #E5E7EB;
+        border-radius: 8px;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        outline: none;
+        transition: border-color 0.3s;
+      " onfocus="this.style.borderColor='#4F46E5'" onblur="this.style.borderColor='#E5E7EB'">
+      <p id="error-message" style="
+        color: #EF4444;
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        display: none;
+      ">パスワードが正しくありません</p>
+      <button onclick="verifyPassword()" style="
+        width: 100%;
+        padding: 1rem;
+        background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+      " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(79,70,229,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">ログイン</button>
+    </div>
+  </div>
+
+  <script>
+    const CORRECT_HASH = '9a2912c761cc82d250c3f99ed4659d977400d383c6aa5091ce1b889c7ee0faf2';
+
+    async function sha256(message) {
+      const msgBuffer = new TextEncoder().encode(message);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      return hashHex;
+    }
+
+    async function verifyPassword() {
+      const input = document.getElementById('password-input').value;
+      const hash = await sha256(input);
+
+      if (hash === CORRECT_HASH) {
+        document.getElementById('auth-screen').style.display = 'none';
+        sessionStorage.setItem('authenticated', 'true');
+      } else {
+        document.getElementById('error-message').style.display = 'block';
+        document.getElementById('password-input').style.borderColor = '#EF4444';
+      }
+    }
+
+    document.getElementById('password-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') verifyPassword();
+    });
+
+    if (sessionStorage.getItem('authenticated') === 'true') {
+      document.getElementById('auth-screen').style.display = 'none';
+    }
+  </script>
+
   <div id="root"></div>
   <script type="text/babel">
     const { useState, useEffect } = React;
